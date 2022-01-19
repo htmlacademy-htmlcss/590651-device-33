@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Alexandr Gorodov](https://up.htmlacademy.ru/htmlcss/33/user/590651).
-* Наставник: `Неизвестно`.
+* Наставник: [Маргарита Попова](https://htmlacademy.ru/profile/lipsum).
 
 ---
 
