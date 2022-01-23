@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Academy: Девайс Каталог</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+
+            <div class="header-logo">
+                <a href="index.html">device-logo</a>
+            </div>
+    
+            <nav class="navigation">
+
+                <ul class="menu">
+                  <li class="menu-search-field">
+                    <input type="text" placeholder="Текст поиска">
+                    <a href="#">Найти</a>
+                  </li>
+    
+                  <li class="menu-login">
+                    <a href="#">Войти</a>
+                  </li>
+    
+                  <li class="menu-compare">
+                    <a href="#">Сравнить</a>
+                  </li>
+    
+                  <li class="menu-cart">
+                    <a href="#">Корзина</a>
+                  </li>
+                </ul>
+    
+                <ul class="header-nav-list">
+                  <li>
+                    <a href="catalog.html">каталог товаров</a>
+                  </li>
+                  <li>
+                    <a href="#">доставка</a>
+                  </li>
+                  <li>
+                    <a href="#">гарантия</a>
+                  </li>
+                  <li>
+                    <a href="#">контакты</a>
+                  </li>
+                </ul>
+    
+            </nav>
+        </header>
+
+        <main class=catalog-main>
+            <h1 class="catalog-main-title">Моноподы для селфи</h1>
+
+            <ul class="catalog-bread-crumbs">
+                <li class="catalog-bread-crumbs-item">
+                    <a href="index.html">Главная</a>
+                </li>
+                <li class="catalog-bread-crumbs-item">
+                    <a href="catalog.html">Каталог товаров</a>
+                </li>
+                <li class="catalog-bread-crumbs-item">
+                    <a href="#">Моноподы для селфи</a>
+                </li>
+            </ul>
+
+            <ul class="catalog-filter">
+
+                <li class="catalog-filter-item">
+                    <h2>Фильтр:</h2>
+                </li>
+
+                <li class="catalog-filter-item slider-price">
+                    <h3 class="filter-title">Стоимость</h3>
+                    <input class="filter-price-slider" name="slider-price" type="range" min="0" max="8000" value="5000" step="1">
+                    <span id="range-from">от 0</span>
+                    <span id="range-to">до 5000</span>
+                </li>
+
+                <li class="catalog-filter-item filter-by-color">
+                    <h3 class="filter-title">Цвет</h3>
+
+                    <input type="checkbox" id="black" value="black" checked>
+                    <label for="black">Черный</label>
+
+                    <input type="checkbox" id="white" value="white" checked>
+                    <label for="white">Белый</label>
+
+                    <input type="checkbox" id="blue" value="blue">
+                    <label for="blue">Синий</label>
+
+                    <input type="checkbox" id="red" value="red">
+                    <label for="red">Красный</label>
+
+                    <input type="checkbox" id="pink" value="pink">
+                    <label for="pink">Розовый</label>
+                </li>
+
+                <li class="catalog-filter-item">
+                    <div class="filter-by-bluetooth">
+                        <h3 class="filter-title">Bluetooth</h3>
+                        <input type="radio" id="true" name="bluetooth" value="truw" checked>
+                        <label for="true">Есть</label>
+                        <input type="radio" id="false" name="bluetooth" value="false">
+                        <label for="false">Нет</label>
+                    </div>
+                </li>
+
+                <li class="catalog-filter-item">
+                    <button class="overlined-button" type="reset">показать</button>
+                </li>
+
+            </ul>
+
+            <ul class="catalog-sorting">
+                <li>
+                    <h3>сортировка:</h3>
+                </li>
+
+                <li>
+                    <select name="sort-by" id="catalog-content">
+                        <option value="popular">Популярные</option>
+                    </select>
+                </li>
+                <li>
+                    <span class="visually-hidden">
+                        упорядочить по возрастанию
+                    </span>
+                    <span class="visually-hidden">
+                        упорядочить по убыванию
+                    </span>
+                </li>
+                
+            </ul>
+
+            <section class="catalog-items">
+                <ul class="catalog-list">
+                    <li class="catalog-item">
+                        <img class="catalog-item-image" src="" alt="Любительская селфи-палка">
+                        <b class="catalog-item-name">Любительская селфи-палка</b>
+                        <span class="catalog-item-price">500 ₽</span>
+                    </li>
+                    <li class="catalog-item">
+                        <img class="catalog-item-image" src="" alt="Профессиональная селфи-палка">
+                        <b class="catalog-item-name">Профессиональная селфи-палка</b>
+                        <span class="catalog-item-price">1500 ₽</span>
+                    </li>
+                    <li class="catalog-item">
+                        <img class="catalog-item-image" src="" alt="Непотопляемая селфи-палка">
+                        <b class="catalog-item-name">Непотопляемая селфи-палка</b>
+                        <span class="catalog-item-price">2500 ₽</span>
+                    </li>
+                    <li class="catalog-item">
+                        <img class="catalog-item-image" src="" alt="Селфи-палка «Следуй за мной»">
+                        <b class="catalog-item-name">Селфи-палка «Следуй за мной»</b>
+                        <span class="catalog-item-price">1500 ₽</span>
+                    </li>
+                </ul>
+
+                <button class="catalog-show-more-button" href="#">загрузить ещё</button>
+
+                <div>
+                    <a href="#">назад</a>
+                    <ul class="catalog-pages">
+                        <li>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">...</a>
+                            <a href="#">15</a>
+                        </li>
+                    </ul>
+                    <a href="#">вперёд</a>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+
+          <div class="footer-logo">
+            <a href="index.html">device-logo</a>
+          </div>
+  
+          <div class="footer-nav">
+  
+            <p class="address">
+              Санкт-Петербург, набережная реки Карповки, 5, литера П.
+            </p>
+  
+            <ul class="footer-nav-list">
+              <li>
+                <a href="#">доставка</a>
+              </li>
+              <li>
+                <a href="#">гарантия</a>
+              </li>
+              <li>
+                <a href="#">контакты</a>
+              </li>
+            </ul>
+  
+            <a href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
+            
+          </div>
+  
+          <div class="footer-bottom-elements">
+  
+            <div class="footer-social">
+              <ul class="social">
+                <li class="social-item">
+                  <a href="https://www.facebook.com/htmlacademy">fb</a>
+                </li>
+                <li class="social-item">
+                  <a href="https://www.instagram.com/htmlacademy/">inst</a>
+                </li>
+                <li class="social-item">
+                  <a href="https://twitter.com/htmlacademy_ru">twitter</a>
+                </li>
+              </ul>
+            </div>
+  
+            <a href="https://htmlacademy.ru">.htmlacademy</a>
+  
+          </div>
+        </footer>
+    </div>
+</body>
+</html>
