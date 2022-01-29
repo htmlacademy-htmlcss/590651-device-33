@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>HTML Academy: Девайс Каталог</title>
+  <title>Каталог</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -110,8 +110,8 @@
           <fieldset class="filters-group">
             <legend class="filters-title">Стоимость</legend>
             <input class="filters-slider" name="price" type="range" min="0" max="8000" value="5000" step="1">
-            <span id="price-from">От 0</span>
-            <span id="price-to">До 5000</span>
+            <span class="price-limit">От 0</span>
+            <span class="price-limit">До 5000</span>
           </fieldset>
 
           <fieldset class="filters-group">
@@ -233,11 +233,11 @@
 
       <section class="pagination">
         <h2 class="visually-hidden">Навигация</h2>
-        <button class="pagination-show-more" type="button">Загрузить ещё</button>
+        <button class="button pagination-show-more" type="button">Загрузить ещё</button>
 
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a href="#" class="pagination-prev">Назад</a>
+            <a href="#" class="pagination-prev button">Назад</a>
           </li>
           <li class="pagination-item">
             <a href="#" class="pagination-link">1</a>
@@ -255,7 +255,7 @@
             <a href="#" class="pagination-link">15</a>
           </li>
           <li class="pagination-item">
-            <a href="#" class="pagination-next">Вперёд</a>
+            <a href="#" class="pagination-next button">Вперёд</a>
           </li>
         </ul>
       </section>
