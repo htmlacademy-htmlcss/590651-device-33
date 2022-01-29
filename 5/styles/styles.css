@@ -260,6 +260,11 @@ body {
     color: initial;
 }
 
+.pagination-show-more {
+    background-color: #ffffff;
+    border: 3px solid #e5e5e5;
+}
+
 .price-limit {
     font-size: 15px;
     line-height: 18px;
@@ -285,6 +290,14 @@ body {
 
 .product-card-price {
     line-height: 21px;
+}
+
+.pagination {
+    background-color: #ffffff;
+}
+
+.pagination-list {
+    background-color: #ebebeb;
 }
 
 .pagination-link {
