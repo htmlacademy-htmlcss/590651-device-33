@@ -31,46 +31,59 @@ body {
     background-color: #ffffff;
 }
 
-/******************************************************************************
+/********************************************************************************************************
 
-                                HEADER STYLES
+                                            HEADER STYLES
 
-******************************************************************************/
+********************************************************************************************************/
 
 .page-header {
     background-color: #ffe17f;
     color: #000000;
 }
 
-.page-header a {
+.user-nav-list {
+    list-style-type: none;
+}
+
+.main-nav-list {
+    list-style-type: none;
+}
+
+.user-nav-link {
     text-decoration: none;
     color: #000000;
 }
 
-.search {
+.main-nav-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.search-button {
     font-size: 16px;
     line-height: 20px;
 }
 
 .search-input {
-    border: none;
-    background: none;
+    font-size: 16px;
+    line-height: 20px;
 }
 
-/* disable lists dot decoration */
-.user-nav-item,
-.main-nav li,
-.slider-item,
-.bullets-item,
-.categories-item,
-.services-nav-item,
-.about-list li,
-.contacts-shedule li,
-.breadcrumbs-item,
-.filters-item,
-.pagination-item,
-.page-footer li {
-    list-style: none;
+.search-button {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    line-height: 21px;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+}
+
+.search-input {
+    border: none;
+    background: none;
 }
 
 .main-nav-link {
@@ -80,35 +93,91 @@ body {
     text-transform: uppercase;
 }
 
+/********************************************************************************************************
+
+                                            CATALOG HEADER STYLES
+
+********************************************************************************************************/
+
+.catalog-nav-list {
+    list-style-type: none;
+}
+
+.catalog-nav-link {
+    text-decoration: none;
+    color: #000000;
+}
+
 .catalog-nav-item {
-    font-family: initial;
+    font-family: "Rubik";
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
 }
 
-/******************************************************************************
+/********************************************************************************************************
 
-                                MAIN STYLES
+                                INDEX MAIN STYLES (and repeated on both pages)
 
-******************************************************************************/
+********************************************************************************************************/
 
 .visually-hidden {
-    display: none;
+    visibility: hidden
 }
 
 .slider-title {
-    font-family: "Raleway";
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 50px;
     line-height: 50px;
     color: #000000;
 }
 
-.bullets-button,
-.slider-button,
-.subscribe-button,
-.search-button,
+.categories-list {
+    list-style-type: none;
+}
+
+.slider-list {
+    list-style-type: none;
+}
+
+.bullets {
+    list-style-type: none;
+}
+
+.bullets-button {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    line-height: 21px;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+}
+
+.slider-button {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    line-height: 21px;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+}
+
+.subscribe-button {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    line-height: 21px;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+}
+
 .button {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -121,49 +190,111 @@ body {
 }
 
 .details dd {
-    font-family: initial;
+    font-family: "Rubik", sans-serif;
     font-size: 36px;
-    line-height: initial;
-    color: initial;
+    color: #000000;
 }
 
 .details dt {
     font-size: 16px;
 }
 
-.categories-list h3 {
-    font-family: "Raleway", sans-serif;
-    line-height: 24px;
-    color: initial;
-}
-
 .categories-list a {
     text-decoration: none;
-
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    line-height: 24px;
+    color: #000000;
 }
+
+.categories-vr::before {
+    content: '';
+    background-image: url('../images/categories/vr-icon.svg');
+    display: block;
+    width: 97px;
+    height: 55px;
+}
+
+.categories-selfie::before {
+    content:'';
+    background-image: url('../images/categories/monopode-icon.svg');
+    width: 86px;
+    height: 117px;
+    display: block;
+}
+
+.categories-cameras::before {
+    content:'';
+    background-image: url('../images/categories/action-cam-icon.svg');
+    width: 71px;
+    height: 87px;
+    display: block;
+}
+
+.categories-fitness::before {
+    content:'';
+    background-image: url('../images/categories/fitness-icon.svg');
+    width: 107px;
+    height: 65px;
+    display: block;
+}
+
+.categories-watches::before {
+    content:'';
+    background-image: url('../images/categories/smart-watch-icon.svg');
+    width: 56px;
+    height: 98px;
+    display: block;
+}
+
+.categories-quadrocopters::before {
+    content:'';
+    background-image: url('../images/categories/quadocopter-icon.svg');
+    width: 132px;
+    height: 69px;
+    display: block;
+}
+
+.categories-link::before {
+    background-color: #ffe17f;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 160px;
+}
+
+.services-nav {
+    list-style-type: none;
+}
+
 .services {
     background-color: #f0f0f0;
 }
 
 .service-item:first-of-type:after {
-    content: url('../images/services/delivery.svg');
+    content: '';
+    background-image: url('../images/services/delivery.svg');
+    display: block;
     width: 136px;
     height: 164px;
 }
 
 .service-item:nth-of-type(2)::after {
-    content: url('../images/services/guarantee.svg');
+    content: '';
+    background-image: url('../images/services/guarantee.svg');
+    display: block;
     width: 171px;
     height: 195px;
 }
 
 .service-item:last-of-type::after {
-    content: url('../images/services/credit.svg');
+    content: '';
+    background-image: url('../images/services/credit.svg');
+    display: block;
     width: 156px;
     height: 188px;
 }
 
-.delivery-link-wrapper {
+.delivery {
     background-color: #f0f0f0;
     height: 100px;
     text-align: center;
@@ -171,7 +302,9 @@ body {
 }
 
 .delivery-link::before {
-    content: url('../images/icons/truck-icon.svg');
+    content: '';
+    background-image: url('../images/icons/truck-icon.svg');
+    display: block;
     width: 47px;
     height: 31px;
 }
@@ -183,37 +316,63 @@ body {
     line-height: 23px;
     width: 910px;
     text-decoration: none;
-    color: initial;
+    color: #000000;
     text-transform: uppercase;
 }
 
 .delivery-link::after {
-    content: url('../images/icons/info-icon.svg');
+    content: '';
+    background-image: url('../images/icons/info-icon.svg');
+    display: block;
     background-color: rgba(220, 220, 220, 0.5);
 }
 
-.service-item h3,
-.about-title,
-.contacts-title,
-.subscribe-title,
-.inner-header-title {
+.service-item h3 {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 50px;
     line-height: 50px;
-    color: initial;
+    color: #000000;
+}
+
+.about-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.contacts-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.subscribe-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.about-list {
+    list-style-type: none;
 }
 
 .about-list li {
     font-weight: 700;
     line-height: 20px;
-    color: initial;
+    color: #000000;
 }
 
 .contacts-subtitle {
     font-weight: 700;
     font-size: 24px;
-    color: initial;
+    color: #000000;
 }
 
 .contacts-address {
@@ -221,18 +380,40 @@ body {
 }
 
 .contacts-phone {
-    color: inherit;
+    color: #444444;
+}
+
+/********************************************************************************************************
+
+                                            CATALOG MAIN STYLES
+
+********************************************************************************************************/
+
+.inner-header-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.breadcrumbs {
+    list-style-type: none;
 }
 
 .breadcrumbs-link {
     font-size: 16px;
     line-height: 19px;
-    color: initial;
+    color: #000000;
     text-decoration: none;
 }
 
 .catalog-products {
     background-color: #f0f0f0;
+}
+
+.filters-list {
+    list-style-type: none;
 }
 
 .filters-title {
@@ -245,19 +426,38 @@ body {
 .filters-group legend {
     font-weight: 700;
     line-height: 20px;
-    color: initial;
+    color: #000000;
 }
 
+.pagination-list {
+    list-style-type: none;
+}
 
-.catalog-title,
-.filters-title,
+.catalog-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.filters-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
 .pagination-show-more {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
-    color: initial;
+    color: #000000;
 }
 
 .pagination-show-more {
@@ -284,7 +484,7 @@ body {
 .product-card-title a {
     font-weight: 700;
     line-height: 20px;
-    color: initial;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -308,11 +508,11 @@ body {
     line-height: 20px;
 }
 
-/******************************************************************************
+/********************************************************************************************************
 
-                                FOOTER STYLES
+                                                FOOTER STYLES
 
-******************************************************************************/
+********************************************************************************************************/
 
 .page-footer {
     background-color: #444444;
@@ -335,6 +535,7 @@ body {
     font-weight: 800;
     line-height: 21px;
     text-transform: uppercase;
+    list-style-type: none;
 }
 
 .page-footer-left a {
