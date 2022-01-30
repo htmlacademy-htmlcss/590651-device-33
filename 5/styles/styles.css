@@ -304,7 +304,7 @@ body {
 .delivery-link::before {
     content: '';
     background-image: url('../images/icons/truck-icon.svg');
-    display: block;
+    display: inline-block;
     width: 125px;
     height: 100px;
     background-repeat: no-repeat;
@@ -316,7 +316,6 @@ body {
     font-weight: 800;
     font-size: 20px;
     line-height: 23px;
-    width: 910px;
     text-decoration: none;
     color: #000000;
     text-transform: uppercase;
@@ -327,7 +326,7 @@ body {
     background-image: url('../images/icons/info-icon.svg');
     background-repeat: no-repeat;
     opacity: 0.3;
-    display: block;
+    display: inline-block;
     width: 40px;
     height: 40px;
     border-radius: 50%;
