@@ -305,8 +305,10 @@ body {
     content: '';
     background-image: url('../images/icons/truck-icon.svg');
     display: block;
-    width: 47px;
-    height: 31px;
+    width: 125px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-color:#ffe17f;
 }
 
 .delivery-link {
@@ -323,10 +325,13 @@ body {
 .delivery-link::after {
     content: '';
     background-image: url('../images/icons/info-icon.svg');
+    background-repeat: no-repeat;
     opacity: 0.3;
     display: block;
-    width: 2px;
-    height: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(220, 220, 220, 0.5);
 }
 
 .service-item h3 {
