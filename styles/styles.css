@@ -705,10 +705,6 @@ body {
   flex-grow: 1;
 }
 
-.catalog-container {
-  background-color: #f0f0f0;
-}
-
 .inner-header {
   width: 1079px;
   margin: 35px auto;
@@ -746,6 +742,10 @@ body {
   line-height: 19px;
   text-decoration: none;
   color: var(--special-font-color);
+}
+
+.catalog-container {
+  background-color: #f0f0f0;
 }
 
 .catalog-products {
