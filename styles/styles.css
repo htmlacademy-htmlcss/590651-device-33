@@ -536,6 +536,10 @@ body {
   padding-bottom: 36px;
 }
 
+.inner-header .container {
+  padding-left: 120px;
+}
+
 .inner-header-title {
   margin-top: 35px;
   margin-bottom: 16px;
@@ -590,12 +594,16 @@ body {
 
 .filters {
   width: 320px;
+  padding-left: 60px;
 }
 
 .filters-group {
   width: 200px;
-  border: none;
+  padding-left: 0;
   padding-bottom: 35px;
+  margin: 0;
+
+  border: none;
 }
 
 .filter-price {
@@ -641,10 +649,16 @@ body {
   height: 70px;
 
   padding-left: 40px;
-  padding-right: 50px;
 
   justify-content: space-between;
   align-items: center;
+}
+
+.select-control {
+  width: 160px;
+
+  border: none;
+  background-color: transparent;
 }
 
 .filters-sorting .button {
