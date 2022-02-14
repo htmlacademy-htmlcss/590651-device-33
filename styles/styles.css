@@ -326,15 +326,12 @@ fieldset, legend {
 .categories-list {
   display: grid;
   margin-bottom: 70px;
-  grid-template-columns: 160px 160px 160px 160px 160px 160px;
+  grid-template-columns: repeat(6, 160px);
   gap: 40px;
+  grid-column: 1 / -1;
 }
 
-.categories-item {
-  width: 160px;
-}
-
-.categories-list a {
+.categories-link {
   display: block;
 
   font-family: var(--special-font);
@@ -342,6 +339,7 @@ fieldset, legend {
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
+  letter-spacing: -0.02em;
 
   color: var(--title-font-color);
 }
@@ -361,10 +359,6 @@ fieldset, legend {
 .services-nav-list {
   width: 290px;
   margin-top: -76px;
-}
-
-.service-nav-item .button {
-
 }
 
 .services-nav-item:not(:last-child) {
@@ -710,10 +704,15 @@ fieldset, legend {
 }
 
 .product-card-title {
+  width: 143px;
+}
+
+.follow-me {
   width: 226px;
 }
 
 .product-card-title a {
+  font-size: 18px;
   font-weight: 700;
   line-height: 20px;
   text-decoration: none;
