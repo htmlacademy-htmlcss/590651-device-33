@@ -325,10 +325,14 @@ fieldset, legend {
 
 .categories-list {
   display: grid;
+  width: 1160px;
   margin-bottom: 70px;
   grid-template-columns: repeat(6, 160px);
   gap: 40px;
-  grid-column: 1 / -1;
+}
+
+.categories-item {
+  grid-row: 1 / -1;
 }
 
 .categories-link {
@@ -683,6 +687,7 @@ fieldset, legend {
 
 .product-list {
   display: grid;
+  width: 840px;
   grid-template-areas: "product-card product-card"
                        "product-card product-card";
   gap: 40px;
