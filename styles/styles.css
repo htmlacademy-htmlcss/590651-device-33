@@ -682,8 +682,7 @@ fieldset, legend {
 .product-list {
   display: grid;
   width: 840px;
-  grid-template-areas: "product-card product-card"
-                       "product-card product-card";
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding-top: 70px;
   padding-right: 40px;
