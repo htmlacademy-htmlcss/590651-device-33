@@ -331,34 +331,6 @@ fieldset, legend {
   gap: 40px;
 }
 
-.categories-item {
-  grid-row: 1 / -1;
-}
-
-.categories-item-vr {
-  grid-column: 1 / 2;
-}
-
-.categories-item-selfie {
-  grid-column: 2 / 3;
-}
-
-.categories-item-cameras {
-  grid-column: 3 / 4;
-}
-
-.categories-item-fitness {
-  grid-column: 4 / 5;
-}
-
-.categories-item-watches {
-  grid-column: 5 / -2;
-}
-
-.categories-item-quadrocopters {
-  grid-column: 6 / -1;
-}
-
 .categories-link {
   display: block;
 
@@ -374,9 +346,9 @@ fieldset, legend {
 
 .services {
   margin-bottom: 70px;
-  padding-top: 54px;
-  padding-bottom: 115px;
-  background-color: #f0f0f0;
+  padding-top: 73px;
+  padding-bottom: 118px;
+  background: linear-gradient(to bottom, transparent 0 102px, #f0f0f0 102px 100%);
 }
 
 .service-content {
@@ -386,7 +358,6 @@ fieldset, legend {
 
 .services-nav-list {
   width: 290px;
-  margin-top: -76px;
 }
 
 .services-nav-item:not(:last-child) {
@@ -402,7 +373,6 @@ fieldset, legend {
 }
 
 .service-title {
-  margin-top: -82px;
   padding-bottom: 34px;
 
   font-family: var(--special-font);
@@ -720,26 +690,6 @@ fieldset, legend {
   padding-left: 40px;
 
   background-color: var(--white);
-}
-
-.product-amateur-selfie-stick {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.product-professional-selfie-stick {
-  grid-column: 2 / -1;
-  grid-row: 1 / 2;
-}
-
-.product-unsinkable-selfie-stick {
-  grid-column: 1 / 2;
-  grid-row: 2 / -1;
-}
-
-.product-follow-me-selfie-stick {
-  grid-column: 2 / -1;
-  grid-row: 2 / -1;
 }
 
 .product-card-link {
