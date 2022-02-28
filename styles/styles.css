@@ -909,11 +909,11 @@ fieldset, legend {
   padding: 0;
   padding-left: 16px;
   margin-right: -5px;
-  margin-top: 8px;
 
   width: 557px;
   height: 56px;
 
+  line-height: 57px;
   border: none;
   border-bottom: 3px solid #c4c4c4;
   background-color: transparent;
