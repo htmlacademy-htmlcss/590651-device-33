@@ -97,22 +97,20 @@ fieldset, legend {
 
 .button {
   display: inline-block;
+  /* height: 40px; */
   font-family: var(--special-font);
   line-height: 21px;
   font-weight: 800;
+  font-size: 18px;
   color: var(--title-font-color);
   text-transform: uppercase;
   text-decoration: none;
-  /* text-align: center; */
+  text-align: center;
   letter-spacing: 0.2em;
 
   border: none;
   background: none;
   cursor: pointer;
-}
-
-.button-stripe {
-  font-size: 18px;
 }
 
 .button-stripe::before {
@@ -123,6 +121,20 @@ fieldset, legend {
   background-color: var(--main-color);
 
   content: "";
+}
+
+.button-stripe:hover::before {
+  height: 40px;
+  margin-bottom: -29px;
+  margin-top: -15px;
+}
+
+.button-stripe:active::before {
+  background-color: #ffcc33;
+}
+
+.button-stripe:focus {
+  outline: 2px solid #af4fff;
 }
 
 .title {
@@ -147,6 +159,7 @@ fieldset, legend {
   margin-right: auto;
   padding-left: 60px;
   padding-top: 43px;
+  padding-bottom: 2px;
   padding-right: 60px;
 
   color: var(--title-font-color);
@@ -942,6 +955,21 @@ fieldset, legend {
   letter-spacing: 0.2em;
 }
 
+.subscribe-button:hover {
+  color: var(--white);
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.subscribe-button:active span {
+  color: var(--white);
+  opacity: 0.3;
+}
+
+.subscribe-button:focus {
+  outline: 2px solid #af4fff;
+}
+
 .subscribe-its-free {
   width: 160px;
 }
@@ -1189,6 +1217,20 @@ fieldset, legend {
   border: 3px solid #e5e5e5;
 }
 
+.pagination-show-more:hover {
+  border-color: var(--black);
+}
+
+.pagination-show-more:active {
+  border-color: var(--black);
+  color: var(--black);
+  opacity: 0.3;
+}
+
+.pagination-show-more:focus {
+  outline: 2px solid #af4fff;
+}
+
 .pagination-list {
   display: flex;
   width: 760px;
@@ -1202,12 +1244,23 @@ fieldset, legend {
   background-color: #ebebeb;
 }
 
-.pagination-prev {
-  padding-left: 25px;
+.pagination-item .button {
+  display: block;
+  width: 171px;
+  text-align: center;
+  line-height: 71px;
 }
 
-.pagination-next {
-  padding-right: 25px;
+.pagination-item .button:hover {
+  background-color: #dcdcdc;
+}
+
+.pagination-item:active span {
+  opacity: 0.3;
+}
+
+.pagination-item a:focus {
+  outline: 2px solid #af4fff;
 }
 
 .page-num-list .pagination-page-num {
@@ -1222,6 +1275,24 @@ fieldset, legend {
 
   opacity: 0.3;
 }
+
+.pagination-page-num:not(:last-of-type) {
+  margin-right: 31px;
+}
+
+.pagination-page-num:hover .pagination-link {
+  opacity: 1;
+}
+
+.pagination-page-num:active {
+  opacity: 0.1;
+}
+
+.pagination-page-num:focus {
+  outline: 2px solid #af4fff;
+}
+
+
 
 /********************************************************************************************************
 
