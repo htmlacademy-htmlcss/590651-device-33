@@ -97,7 +97,6 @@ fieldset, legend {
 
 .button {
   display: inline-block;
-  /* height: 40px; */
   font-family: var(--special-font);
   line-height: 21px;
   font-weight: 800;
@@ -1032,6 +1031,18 @@ fieldset, legend {
   color: var(--title-font-color);
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:focus {
+  outline: 2px solid #af4fff;
+}
+
 .catalog {
   flex-grow: 1;
   background-color: #f0f0f0;
@@ -1087,6 +1098,10 @@ fieldset, legend {
 
   background-color: var(--black);
   content: "";
+}
+
+.filters .filters-item:focus {
+  outline: 2px solid #af4fff;
 }
 
 .filters-slider {
@@ -1167,34 +1182,56 @@ fieldset, legend {
   padding-top: 70px;
   padding-right: 40px;
   padding-left: 40px;
+  padding-bottom: 3px;
 
   background-color: var(--white);
 }
 
 .product-card-link {
   display: block;
+  text-decoration: none;
+  color: var(--title-font-color);
 }
 
 .product-card-text {
   display: flex;
-
   justify-content: space-between;
 }
 
 .product-card-title {
   width: 230px;
-}
-
-.product-card-title a {
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
   text-decoration: none;
-  color: var(--title-font-color);
 }
 
 .product-card-price {
   line-height: 21px;
+}
+
+.product-card:hover .product-card-image {
+  opacity: 0.6;
+}
+
+.product-card:hover .product-card-title {
+  opacity: 0.6;
+}
+
+.product-card:active .product-card-image {
+  opacity: 0.6;
+}
+
+.product-card:active .product-card-title {
+  opacity: 0.3;
+}
+
+.product-card:active .product-card-price {
+  opacity: 0.3;
+}
+
+.product-card-link:focus {
+  outline: 2px solid #af4fff;
 }
 
 .pagination {
