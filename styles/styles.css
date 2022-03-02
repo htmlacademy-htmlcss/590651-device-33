@@ -317,7 +317,6 @@ fieldset, legend {
   background-color: var(--white);
   border-radius: 50%;
   font-size: 14px;
-  z-index: 100;
 }
 
 .user-nav-item-logout  {
@@ -490,7 +489,7 @@ fieldset, legend {
   font-weight: 800;
   color: var(--title-font-color);
 
-  z-index: 100;
+  z-index: 1;
 }
 
 .slider-title::before {
