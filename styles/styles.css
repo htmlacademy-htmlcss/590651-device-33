@@ -349,7 +349,7 @@ fieldset, legend {
   border-radius: 50%;
 }
 
-.main-nav-item-catalog:hover .catalog-list-opener::after  {
+.catalog-list-opener:hover::after  {
   opacity: 1;
 }
 
@@ -397,6 +397,29 @@ fieldset, legend {
   line-height: 18px;
   text-decoration: none;
   color: var(--title-font-color);
+}
+
+.catalog-nav-list {
+  display: flex;
+  height: 120px;
+  flex-direction: column;
+  align-content: start;
+  flex-wrap: wrap;
+}
+
+.catalog-nav-item {
+  display: block;
+  height: 40px;
+  width: 220px;
+  margin-right: 30px;
+}
+
+.catalog-nav-item:nth-child(4) {
+  margin-right: 0;
+}
+
+.catalog-nav-item:nth-child(5) {
+  margin-right: 0;
 }
 
 /********************************************************************************************************
