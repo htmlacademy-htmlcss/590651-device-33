@@ -912,6 +912,18 @@ fieldset, legend {
   color: var(--main-font-color);
 }
 
+.contacts-phone:hover {
+  opacity: 0.6;
+}
+
+.contacts-phone:active {
+  opacity: 0.3;
+}
+
+.contacts-phone:focus {
+  outline: 2px solid #af4fff;
+}
+
 .information-wrapper .list {
   margin-bottom: 40px;
 }
