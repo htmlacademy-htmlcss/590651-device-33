@@ -1281,12 +1281,12 @@ fieldset, legend {
   opacity: 0.3;
 }
 
-.color-filter-item:disabled {
-  opacity: 0.1;
+.color-filter-item:focus-within .color-mark {
+  outline: 2px solid #af4fff;
 }
 
-.color-filter-item:focus .color-mark {
-  outline: 2px solid #af4fff;
+.color-filter-item:disabled {
+  opacity: 0.1;
 }
 
 .color-mark {
@@ -1320,12 +1320,12 @@ fieldset, legend {
   opacity: 0.3;
 }
 
-.bluetooth-filter-item:disabled {
-  opacity: 0.1;
+.bluetooth-filter-item:focus-within .bluetooth-mark {
+  outline: 2px solid #af4fff;
 }
 
-.bluetooth-filter-item:focus .bluetooth-mark {
-  outline: 2px solid #af4fff;
+.bluetooth-filter-item:disabled {
+  opacity: 0.1;
 }
 
 .bluetooth-mark {
