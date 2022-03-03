@@ -117,61 +117,87 @@
           <form class="filters-form" action="https://echo.htmlacademy.ru/" method="get">
 
             <fieldset class="filters-group filter-price">
-              <legend class="filters-title">Стоимость</legend>
-              <input class="filters-slider" name="price" type="range" min="0" max="8000" value="5000" step="1">
-              <span class="price-limit">От 0</span>
-              <span class="price-limit">До 5000</span>
+              <legend class="filters-subtitle">Стоимость</legend>
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 119px;">
+                    <button class="range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="range-wrapper-inputs">
+                  <label class="catalog-filter-label">
+                    от <input class="range-input" type="number" value="0" name="min-price">
+                  </label>
+                  <label class="catalog-filter-label">
+                    до <input class="range-input range-input-max" type="number" value="5000" name="max-price">
+                  </label>
+
+                </div>
+              </div>
             </fieldset>
 
-            <fieldset class="filters-group filter-color">
-              <legend class="filters-title">Цвет</legend>
+            <fieldset class="filters-group">
+              <legend class="filters-subtitle">Цвет</legend>
               <ul class="list filters-list">
                 <li class="filters-item">
                   <label class="color-filter-item" for="black">
-                    <input type="checkbox" id="black" name="black" checked>
-                    Черный
+                    <input class="color-input visually-hidden" type="checkbox" id="black" name="black" checked>
+                    <span class="color-mark"></span>
+                    <span class="color-label">Черный</span>
                   </label>
                 </li>
                 <li class="filters-item">
                   <label class="color-filter-item" for="white">
-                    <input type="checkbox" id="white" name="white" checked>
-                    Белый
+                    <input class="color-input visually-hidden" type="checkbox" id="white" name="white" checked>
+                    <span class="color-mark"></span>
+                    <span class="color-label">Белый</span>
                   </label>
                 </li>
                 <li class="filters-item">
                   <label class="color-filter-item" for="blue">
-                    <input type="checkbox" id="blue" name="blue">
-                    Синий
+                    <input class="color-input visually-hidden" type="checkbox" id="blue" name="blue">
+                    <span class="color-mark"></span>
+                    <span class="color-label">Синий</span>
                   </label>
                 </li>
                 <li class="filters-item">
                   <label class="color-filter-item" for="red">
-                    <input type="checkbox" id="red" name="red">
-                    Красный
+                    <input class="color-input visually-hidden" type="checkbox" id="red" name="red">
+                    <span class="color-mark"></span>
+                    <span class="color-label">Красный</span>
                   </label>
                 </li>
                 <li class="filters-item">
                   <label class="color-filter-item" for="pink">
-                    <input type="checkbox" id="pink" name="pink">
-                    Розовый
+                    <input class="color-input visually-hidden" type="checkbox" id="pink" name="pink">
+                    <span class="color-mark"></span>
+                    <span class="color-label">Розовый</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="filters-group">
-              <legend class="filters-title">Bluetooth</legend>
+              <legend class="filters-subtitle">Bluetooth</legend>
               <ul class="list filters-list">
                 <li class="filters-item">
-                  <label class="bluetooth-filter-item" for="true">
-                    <input type="radio" id="true" name="bluetooth" value="true" checked>
-                    Есть
+                  <label class="bluetooth-filter-item">
+                    <input class="bluetooth-input visually-hidden" type="radio" name="bluetooth" value="true" checked>
+                    <span class="bluetooth-mark"></span>
+                    <span class="bluetooth-label">Есть</span>
                   </label>
                 </li>
                 <li class="filters-item">
-                  <label class="bluetooth-filter-item" for="false">
-                    <input type="radio" id="false" name="bluetooth" value="false">
-                    Нет
+                  <label class="bluetooth-filter-item">
+                    <input class="bluetooth-input visually-hidden" type="radio" name="bluetooth" value="false">
+                    <span class="bluetooth-mark"></span>
+                    <span class="bluetooth-label">Нет</span>
                   </label>
                 </li>
               </ul>

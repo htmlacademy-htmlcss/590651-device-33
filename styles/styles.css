@@ -1138,12 +1138,109 @@ fieldset, legend {
   font-size: 16px;
   line-height: 19px;
   font-weight: 800;
-  text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--title-font-color);
 }
 
-.filters-form .filters-title::before {
+.range-scale {
+  position: relative;
+  height: 2px;
+  width: 200px;
+  margin-top: 30px;
+  background-color: #dcdcdc;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: var(--black);
+}
+
+.range-toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #ebebeb;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  opacity: 0.5;
+}
+
+.range-toggle:active {
+  background-color: var(--black);
+}
+
+.range-toggle:focus {
+  outline: 2px solid #af4fff;
+}
+
+.toggle-min {
+  left: -9px;
+  top: -8px;
+}
+
+.toggle-max {
+  right: -9px;
+  top: -8px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-label {
+  display: flex;
+  margin-top: 7px;
+  margin-left: -15px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.range-input {
+  width: 20px;
+  padding: 0;
+  text-align: center;
+  font: var(--main-font);
+  color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.catalog-filter-label:focus-within {
+  outline: 2px solid #af4fff;
+}
+
+.catalog-filter-label:focus-within .range-input {
+  outline: none;
+}
+
+.range-input-max {
+  width: 58px;
+  margin-right: 40px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filters-subtitle {
+  margin-bottom: 20px;
+  font-family: var(--special-font);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--title-font-color);
+}
+
+.filters-subtitle::before {
   display: block;
   width: 200px;
   height: 2px;
@@ -1157,10 +1254,6 @@ fieldset, legend {
   outline: 2px solid #af4fff;
 }
 
-.filters-slider {
-  display: block;
-}
-
 .price-limit {
   font-size: 15px;
   line-height: 18px;
@@ -1172,6 +1265,76 @@ fieldset, legend {
   padding-bottom: 18px;
   font-size: 16px;
   line-height: 19px;
+}
+
+.color-filter-item {
+  position: relative;
+  padding-left: 40px;
+  display: block;
+}
+
+.color-filter-item:hover {
+  opacity: 0.6;
+}
+
+.color-filter-item:active {
+  opacity: 0.3;
+}
+
+.color-filter-item:disabled {
+  opacity: 0.1;
+}
+
+.color-filter-item:focus .color-mark {
+  outline: 2px solid #af4fff;
+}
+
+.color-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+}
+
+.color-input:checked + .color-mark {
+  background-image: url("../images/icons/check-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: var(--black);
+}
+
+.bluetooth-filter-item {
+  position: relative;
+  padding-left: 40px;
+  display: block;
+}
+
+.bluetooth-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+}
+
+.bluetooth-input:checked + .bluetooth-mark {
+  border-color: var(--black);
+}
+
+.bluetooth-input:checked + .bluetooth-mark::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--black);
+  border-radius: 50%;
+  content: "";
 }
 
 .catalog-right-column {
@@ -1192,12 +1355,32 @@ fieldset, legend {
   align-items: center;
 }
 
+.filters-sorting .filters-title {
+  text-transform: uppercase;
+}
+
 .select-control {
   width: 160px;
   font-size: 18px;
 
   border: none;
   background-color: transparent;
+}
+
+.select-control:hover {
+  opacity: 0.6;
+}
+
+.select-control:active {
+  opacity: 0.3;
+}
+
+.select-control:focus {
+  outline: 2px solid #af4fff;
+}
+
+.select-control:disabled {
+  opacity: 0.1;
 }
 
 .filters-sorting .button {
