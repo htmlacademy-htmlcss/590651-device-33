@@ -1312,6 +1312,22 @@ fieldset, legend {
   display: block;
 }
 
+.bluetooth-filter-item:hover {
+  opacity: 0.6;
+}
+
+.bluetooth-filter-item:active {
+  opacity: 0.3;
+}
+
+.bluetooth-filter-item:disabled {
+  opacity: 0.1;
+}
+
+.bluetooth-filter-item:focus .bluetooth-mark {
+  outline: 2px solid #af4fff;
+}
+
 .bluetooth-mark {
   position: absolute;
   top: 0;
