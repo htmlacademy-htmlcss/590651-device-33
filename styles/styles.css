@@ -357,10 +357,10 @@ body {
 
 .catalog-list-opener {
   display: inline-block;
-  width: 300px;
+  width: 290px;
   padding: 5px;
-  margin-left: 58px;
-  margin-right: 271px;
+  margin-left: 63px;
+  margin-right: 276px;
   text-decoration: none;
   color: var(--black);
 }
@@ -433,6 +433,7 @@ body {
 
 .main-nav-link:focus {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .catalog-nav-list {
