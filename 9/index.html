@@ -19,9 +19,11 @@
         <form class="page-header-search search" action="https://echo.htmlacademy.ru" method="get">
           <label class="search-field">
             <span class="visually-hidden">Поиск</span>
-            <input class="search-input" type="text" name="search for" placeholder="Текст поиска">
+            <input class="search-input" type="text" name="search for" placeholder="Текст поиска" required>
           </label>
-          <button class="search-button" type="submit">Найти</button>
+          <label class="search-button-wrapper">
+            <button class="search-button" type="submit">Найти</button>
+          </label>
         </form>
 
         <div class="user-nav">
@@ -191,13 +193,12 @@
         </ol>
 
         <div class="slider-buttons">
-        <button class="slider-button">
-          <span class="visually-hidden">Предыдущий товар</span>
-        </button>
-
-        <button class="slider-button">
-          <span class="visually-hidden">Следующий товар</span>
-        </button>
+          <button class="slider-button">
+            <span class="visually-hidden">Предыдущий товар</span>
+          </button>
+          <button class="slider-button">
+            <span class="visually-hidden">Следующий товар</span>
+          </button>
         </div>
       </div>
     </section>
