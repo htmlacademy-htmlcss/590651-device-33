@@ -356,12 +356,11 @@ body {
 }
 
 .catalog-list-opener {
-  /* position: relative; */
   display: inline-block;
-  width: 306px;
+  width: 300px;
   padding: 5px;
-  margin-left: 55px;
-  margin-right: 268px;
+  margin-left: 58px;
+  margin-right: 271px;
   text-decoration: none;
   color: var(--black);
 }
