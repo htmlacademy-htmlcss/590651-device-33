@@ -92,7 +92,7 @@ body {
 
 .button {
   display: inline-block;
-  padding: 9px 0;
+  padding: 9px 2em;
 
   font-family: var(--special-font);
   line-height: 22px;
@@ -176,14 +176,13 @@ body {
 .main-nav {
   position: relative;
   display: flex;
-  margin-bottom: 6px;
   padding-top: 8px;
   align-items: center;
   z-index: 1;
 }
 
 .main-nav-catalog {
-  border-bottom: 19px solid var(--main-color);
+  /* margin-bottom: 20px; */
 }
 
 .page-header-top {
@@ -436,14 +435,30 @@ body {
   outline-offset: 2px;
 }
 
+.catalog-nav {
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+
+.catalog-nav-opened {
+  display: block;
+}
+
+.catalog-nav-opened .catalog-list-opener::after {
+  background-image: url("../images/icons/minus-icon.svg");
+}
+
 .catalog-nav-list {
   position: absolute;
   display: grid;
+  width: 1160px;
   padding-left: 60px;
+  padding-bottom: 20px;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-flow: row dense;
   column-gap: 30px;
-  background-color: transparent;
+  background-color: var(--main-color);
 }
 
 .catalog-nav-item {
@@ -496,14 +511,6 @@ body {
   outline: 2px solid #af4fff;
 }
 
-.catalog-nav {
-  display: none;
-}
-
-.catalog-nav-opened {
-  display: block;
-}
-
 /********************************************************************************************************
 
                                         MAIN STYLES
@@ -520,7 +527,7 @@ body {
 
 .slider-item {
   display: grid;
-  margin-top: -20px;
+  margin-top: -14px;
   grid-template-columns: 560px 560px;
   gap: 40px;
   background: linear-gradient(to bottom, var(--main-color) 0 150px, transparent 150px 100%);
@@ -618,7 +625,8 @@ body {
 }
 
 .slider-description-wrapper .button {
-  width: 220px;
+  /* padding-left: 36px;
+  padding-right: 36px; */
 }
 
 .bullets {
@@ -758,10 +766,10 @@ body {
 }
 
 .services {
-  margin-bottom: 70px;
+  margin-bottom: 5px;
   padding-top: 75px;
-  padding-bottom: 10px;
-  background: linear-gradient(to bottom, transparent 0 113px, #f0f0f0 113px 100%);
+  padding-bottom: 75px;
+  background: linear-gradient(to bottom, transparent 0 113px, #f0f0f0 113px 86%, transparent 86% 100%);
 }
 
 .service-content {
@@ -781,8 +789,8 @@ body {
   margin-top: 35px;
 }
 
-.services-nav-item .button {
-  width: 160px;
+.services-nav-item:nth-of-type(2) .button {
+  padding: 9px 1.2em;
 }
 
 .service-nav-current {
@@ -794,7 +802,6 @@ body {
   padding: 0;
   padding-left: 20px;
   height: 40px;
-  width: 280px;
   text-align: left;
   color: var(--main-color);
 }
@@ -977,7 +984,7 @@ body {
 }
 
 .about .button {
-  width: 270px;
+  padding: 9px 1.2em;
 }
 
 .contacts {
@@ -1020,7 +1027,7 @@ body {
 }
 
 .contacts .button {
-  width: 260px;
+  padding: 9px 1.8em;
 }
 
 .subscribe {
@@ -1153,13 +1160,20 @@ body {
   padding-bottom: 36px;
 }
 
+.inner-header {
+  width: 1160px;
+  margin: auto;
+  background: linear-gradient(to bottom, var(--main-color) 0 20px, transparent 20px 100%);
+}
+
 .inner-header .container {
   padding-left: 60px;
+  padding-top: 20px;
 }
 
 .inner-header-title {
-  margin-top: 35px;
-  margin-bottom: 10px;
+  margin-top: 38px;
+  margin-bottom: 9px;
 
   font-family: var(--special-font);
   font-size: 50px;
@@ -1177,7 +1191,7 @@ body {
   display: inline-block;
   width: 4px;
   height: 7px;
-  margin: 0 16px;
+  margin: 0 14px;
 
   background-image: url("../images/icons/arrow-right.svg");
 
@@ -1466,7 +1480,7 @@ body {
 }
 
 .filters-form .button {
-  width: 200px;
+  padding: 9px 2.6em;
 }
 
 .catalog-right-column {
