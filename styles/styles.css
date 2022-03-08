@@ -1019,11 +1019,11 @@ body {
 }
 
 .information-wrapper .list {
-  margin-bottom: 33px;
+  margin-bottom: 30px;
 }
 
 .contacts .button {
-  margin-bottom: 80px;
+  margin-bottom: 67px;
 }
 
 .contacts .button {
@@ -1037,13 +1037,13 @@ body {
 .subscribe-row {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 38px;
+  padding-top: 52px;
   justify-content: space-between;
   align-items: center;
 }
 
 .subscribe-row:first-child {
-  margin-bottom: 128px;
+  margin-bottom: 118px;
 }
 
 .subscribe-row:last-child {
@@ -1054,6 +1054,7 @@ body {
 .subscribe-title {
   width: 348px;
   margin-top: 12px;
+  padding-left: 6px;
   align-self: flex-start;
 
   font-family: var(--special-font);
@@ -1064,7 +1065,7 @@ body {
 }
 
 .subscribe-text {
-  margin-left: auto;
+  padding: 5px;
   max-width: 560px;
 }
 
@@ -1248,10 +1249,14 @@ body {
 .filters-group {
   width: 200px;
   padding: 0;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
   margin: 0;
 
   border: none;
+}
+
+.filters-group + .button {
+  margin-top: 10px;
 }
 
 .filters-title {
@@ -1354,7 +1359,7 @@ body {
 .filters-subtitle {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-family: var(--special-font);
   font-size: 16px;
   line-height: 19px;
@@ -1395,7 +1400,7 @@ body {
 
 .color-filter-item {
   position: relative;
-  padding-left: 40px;
+  padding-left: 36px;
   display: block;
 }
 
@@ -1434,7 +1439,7 @@ body {
 
 .bluetooth-filter-item {
   position: relative;
-  padding-left: 40px;
+  padding-left: 36px;
   display: block;
 }
 
