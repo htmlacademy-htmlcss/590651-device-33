@@ -301,6 +301,7 @@ body {
 
 .cart-counter {
   position: relative;
+  top: -2px;
 
   display: inline-block;
   width: 21px;
@@ -417,13 +418,12 @@ body {
 
 .user-nav-link:active {
   opacity: 0.3;
-  text-decoration: underline;
-  text-underline-offset: 4px;
   outline: none;
 }
 
 .user-nav-link:focus-within {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .main-nav-link:not(.catalog-list-opener):hover {
