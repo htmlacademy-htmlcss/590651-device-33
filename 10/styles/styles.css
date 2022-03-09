@@ -176,13 +176,10 @@ body {
 .main-nav {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   padding-top: 8px;
   align-items: center;
   z-index: 1;
-}
-
-.main-nav-catalog {
-  /* margin-bottom: 20px; */
 }
 
 .page-header-top {
@@ -367,13 +364,16 @@ body {
 .catalog-list-opener span {
   position: relative;
   right: 35px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .catalog-list-opener::after {
   content: "";
   position: absolute;
   left: 286px;
-  bottom: 0;
+  top: 50%;
+  margin-top: -25px;
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -622,11 +622,6 @@ body {
 .slider-navigation {
   display: flex;
   justify-content: space-between;
-}
-
-.slider-description-wrapper .button {
-  /* padding-left: 36px;
-  padding-right: 36px; */
 }
 
 .bullets {
