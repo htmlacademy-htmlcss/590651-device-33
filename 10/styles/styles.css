@@ -796,7 +796,6 @@ body {
 .service-nav-current .button {
   padding-right: 130px;
   padding-left: 20px;
-  height: 40px;
   text-align: left;
   color: var(--main-color);
 }
