@@ -393,10 +393,6 @@ body {
   z-index: 1;
 }
 
-.catalog-list-opened:active::after {
-  background-image: url("../images/icons/minus-icon.svg");
-}
-
 .catalog-list-opener:hover::after  {
   opacity: 1;
 }
