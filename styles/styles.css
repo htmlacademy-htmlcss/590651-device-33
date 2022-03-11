@@ -1568,6 +1568,10 @@ body {
   background-color: var(--white);
 }
 
+.product-card {
+  position: relative;
+}
+
 .product-card-link {
   display: block;
   text-decoration: none;
@@ -1595,12 +1599,24 @@ body {
   line-height: 21px;
 }
 
+.product-card .button {
+  position: absolute;
+  display: none;
+}
+
 .product-card:hover .product-card-image {
   opacity: 0.6;
 }
 
 .product-card:hover .product-card-title {
   opacity: 0.6;
+}
+
+.product-card:hover .button {
+  display: inline-block;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .product-card:active .product-card-image {
@@ -1613,6 +1629,10 @@ body {
 
 .product-card:active .product-card-price {
   opacity: 0.3;
+}
+
+.product-card:active .button {
+  background: linear-gradient(to bottom, transparent 0 41.5%, #ffc700 41.5% 59%, transparent 59% 100%);
 }
 
 .product-card-link:focus{
