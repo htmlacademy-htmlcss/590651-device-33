@@ -393,10 +393,6 @@ body {
   z-index: 1;
 }
 
-.catalog-list-opener:active::after {
-  background-image: url("../images/icons/minus-icon.svg");
-}
-
 .catalog-list-opener:hover::after  {
   opacity: 1;
 }
@@ -1568,6 +1564,26 @@ body {
   background-color: var(--white);
 }
 
+.product-card {
+  position: relative;
+}
+
+.new-product::after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  font-family: var(--special-font);
+  font-size: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 15px 11px;
+
+  content: "NEW";
+}
+
 .product-card-link {
   display: block;
   text-decoration: none;
@@ -1595,12 +1611,28 @@ body {
   line-height: 21px;
 }
 
+.product-card .button {
+  position: absolute;
+  display: none;
+}
+
 .product-card:hover .product-card-image {
   opacity: 0.6;
 }
 
 .product-card:hover .product-card-title {
   opacity: 0.6;
+}
+
+.product-card:hover .button {
+  display: inline-block;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product-card:hover .new-product::after {
+  opacity: 0.2;
 }
 
 .product-card:active .product-card-image {
@@ -1613,6 +1645,10 @@ body {
 
 .product-card:active .product-card-price {
   opacity: 0.3;
+}
+
+.product-card:active .button {
+  background: linear-gradient(to bottom, transparent 0 41.5%, #ffc700 41.5% 59%, transparent 59% 100%);
 }
 
 .product-card-link:focus{
