@@ -110,16 +110,16 @@ body {
   cursor: pointer;
 }
 
-.button:not(.service-nav-current .button) {
+.button {
   background: linear-gradient(to bottom, transparent 0 41.5%, var(--main-color) 41.5% 59%, transparent 59% 100%);
 }
 
-.button:not(.service-nav-current .button):hover {
+.button:hover {
   background-color: var(--main-color);
   transition: 0.6s;
 }
 
-.button:not(.service-nav-current .button):active {
+.button:active {
   background: #ffc700;
 }
 
@@ -821,6 +821,20 @@ body {
   padding-right: 130px;
   padding-left: 20px;
   color: var(--main-color);
+  background: var(--black);
+}
+
+.service-nav-current .button:hover {
+  opacity: 0.5;
+}
+
+.service-nav-current .button:active {
+  opacity: 0.3;
+}
+
+.service-nav-current .button:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .service-item {
