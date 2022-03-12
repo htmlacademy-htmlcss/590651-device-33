@@ -2,9 +2,10 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Девайс</title>
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" type="image/svg" size="32x32" href="images/icons/favicon.svg">
+  <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
 </head>
 <body class="page-body">
   <div class="container">
@@ -20,29 +21,24 @@
             <span class="visually-hidden">Поиск.</span>
             <input class="search-input" type="text" name="search for" placeholder="Текст поиска" required>
           </label>
-          <label class="search-button-wrapper">
-            <button class="search-button" type="submit">Найти</button>
-          </label>
+          <button class="search-button" type="submit">Найти</button>
         </form>
 
         <div class="user-nav">
           <ul class="list user-nav-list">
             <li class="user-nav-item">
-              <a class="user-nav-link" href="#">
-                <svg class="nav-link-icon" aria-hidden="true" focusable="false" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.5 12.778h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z" fill="#000"/></svg>
+              <a class="user-nav-link user-login" href="#">
                 <span class="nav-link-text">Войти</span>
               </a>
             </li>
             <li class="user-nav-item">
-              <a class="user-nav-link" href="#">
-                <svg class="nav-link-icon" aria-hidden="true" focusable="false" width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 .778H4v12h2v-12ZM2 4.778H0v8h2v-8ZM10 3.778H8v9h2v-9Z" fill="#000"/></svg>
+              <a class="user-nav-link user-compare" href="#">
                 <span class="nav-link-text">Сравнить</span>
               </a>
             </li>
             <li class="user-nav-item user-nav-item-cart">
-              <a class="user-nav-link" href="#">
+              <a class="user-nav-link user-cart" href="#">
                 <span class="cart-counter">2</span>
-                <svg class="nav-link-icon" aria-hidden="true" focusable="false" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.3 5.778-3.5.2-3.2-4.9c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.678l2.2 3.2H5.9l2.1-3.2Z" fill="#000"/></svg>
                 <span class="nav-link-text">Корзина</span>
               </a>
             </li>
@@ -51,12 +47,33 @@
       </div>
 
       <nav class="main-nav">
-        <a class="main-nav-link catalog-list-opener" href="catalog.html">
-          <span>
-            Каталог товаров
-          </span>
-        </a>
         <ul class="list main-nav-list">
+          <li class="main-nav-item">
+            <a class="main-nav-link catalog-list-opener" href="catalog.html">Каталог товаров</a>
+            <!-- add class catalog-nav-opened for submenu opening -->
+            <div class="catalog-nav">
+              <ul class="list catalog-nav-list">
+                <li class="catalog-nav-item catalog-first-col">
+                  <a class="catalog-nav-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="catalog-nav-item catalog-first-col">
+                  <a class="catalog-nav-link" href="#">Моноподы для cелфи</a>
+                </li>
+                <li class="catalog-nav-item catalog-first-col">
+                  <a class="catalog-nav-link" href="#">Экшн-камеры</a>
+                </li>
+                <li class="catalog-nav-item catalog-second-col">
+                  <a class="catalog-nav-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="catalog-nav-item catalog-second-col">
+                  <a class="catalog-nav-link" href="#">Умные часы</a>
+                </li>
+                <li class="catalog-nav-item catalog-third-col">
+                  <a class="catalog-nav-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="main-nav-item">
             <a class="main-nav-link" href="#">Доставка</a>
           </li>
@@ -68,39 +85,18 @@
           </li>
         </ul>
       </nav>
-      <!-- add class catalog-nav-opened for submenu opening -->
-      <div class="catalog-nav">
-        <ul class="list catalog-nav-list">
-          <li class="catalog-nav-item catalog-first-col">
-            <a class="catalog-nav-link" href="#">Виртуальная реальность</a>
-          </li>
-          <li class="catalog-nav-item catalog-first-col">
-            <a class="catalog-nav-link" href="#">Моноподы для cелфи</a>
-          </li>
-          <li class="catalog-nav-item catalog-first-col">
-            <a class="catalog-nav-link" href="#">Экшн-камеры</a>
-          </li>
-          <li class="catalog-nav-item catalog-second-col">
-            <a class="catalog-nav-link" href="#">Фитнес-браслеты</a>
-          </li>
-          <li class="catalog-nav-item catalog-second-col">
-            <a class="catalog-nav-link" href="#">Умные часы</a>
-          </li>
-          <li class="catalog-nav-item catalog-third-col">
-            <a class="catalog-nav-link" href="#">Квадрокоптеры</a>
-          </li>
-        </ul>
-      </div>
     </header>
   </div>
 
   <main class="page-main">
     <section class="slider-section">
       <div class="container slider-container">
-        <h1 class="title visually-hidden">Лидеры продаж.</h1>
+        <h1 class="visually-hidden">Лидеры продаж.</h1>
         <ol class="list">
-          <li class="slider-item">
-            <img src="images/slider/slider-1.png" alt="Квадрокоптер." width="560" height="560">
+          <li class="slider-item slider-item-active">
+            <div class="slider-image-wrapper">
+              <img src="images/slider/slider-1.png" alt="Квадрокоптер." width="560" height="560">
+            </div>
             <div class="slider-description-wrapper">
               <h2 class="title slider-title first-slide">Порхает как бабочка, жалит как пчела!</h2>
               <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
@@ -117,8 +113,10 @@
               </div>
             </div>
           </li>
-          <li class="slider-item visually-hidden">
-            <img src="images/slider/slider-2.png" alt="Фитнес браслет." width="560" height="560">
+          <li class="slider-item">
+            <div class="slider-image-wrapper">
+              <img src="images/slider/slider-2.png" alt="Фитнес браслет." width="560" height="560">
+            </div>
             <div class="slider-description-wrapper">
               <h2 class="title slider-title second-slide">Худеем<br> правильно!</h2>
               <p class="slider-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
@@ -131,8 +129,10 @@
               </div>
             </div>
           </li>
-          <li class="slider-item visually-hidden">
-            <img src="images/slider/slider-3.png" alt="селфи палка." width="560" height="560">
+          <li class="slider-item">
+            <div class="slider-image-wrapper">
+              <img src="images/slider/slider-3.png" alt="Селфи палка." width="560" height="560">
+            </div>
             <div class="slider-description-wrapper">
               <h2 class="title slider-title third-slide">Делай селфи,<br> как Бен Стиллер! </h2>
               <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
@@ -180,7 +180,7 @@
 
     <section class="categories">
       <div class="container">
-        <h2 class="title visually-hidden">Категории товаров.</h2>
+        <h2 class="visually-hidden">Категории товаров.</h2>
 
         <ul class="list categories-list">
           <li class="categories-item">
@@ -207,7 +207,7 @@
 
     <section class="services">
       <div class="container">
-        <h2 class="title visually-hidden">Сервисы.</h2>
+        <h2 class="visually-hidden">Сервисы.</h2>
 
         <div class="service-content">
           <ul class="list services-nav-list">
@@ -223,17 +223,17 @@
           </ul>
 
           <div class="service-list">
-            <div class="service-item service-delivery">
+            <div class="service-item service-delivery service-item-active">
               <h3 class="title service-title">Доставка</h3>
               <p class="services-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь<br> мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
 
-            <div class="service-item service-quarantee visually-hidden">
+            <div class="service-item service-quarantee">
               <h3 class="title service-title">Гарантия</h3>
               <p class="services-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </div>
 
-            <div class="service-item service-credit visually-hidden">
+            <div class="service-item service-credit">
               <h3 class="title service-title">Кредит</h3>
               <p class="services-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
             </div>
@@ -286,7 +286,7 @@
       <div class="container">
         <div class="subscribe-row">
           <h2 class="title subscribe-title">Подпишитесь на рассылку</h2>
-          <div>
+          <div class="subscribe-text-wrapper">
             <p class="subscribe-text">Еженедельный дайджест с обзорами новинок,<br> длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           </div>
         </div>
@@ -294,9 +294,7 @@
           <form action="https://echo.htmlacademy.ru" method="post">
               <span class="visually-hidden">Введите Ваш e-mail здесь.</span>
               <input class="subscribe-input" type="email" name="email" placeholder="Ваш e-mail">
-              <button class="subscribe-button" type="submit">
-                <span>Подписаться</span>
-              </button>
+              <button class="subscribe-button" type="submit">Подписаться</button>
           </form>
           <span class="subscribe-its-free">Это бесплатно</span>
         </div>
@@ -333,21 +331,18 @@
           <h2 class="title visually-hidden">Давайте дружить.</h2>
           <ul class="list social-list">
             <li class="social-item">
-              <a class="social-link" href="https://www.facebook.com/htmlacademy">
-                <span class="social-icon social-item-facebook"></span>
+              <a class="social-link social-link-facebook" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Facebook.</span>
               </a>
             </li>
             <li class="social-item">
-              <a class="social-link" href="https://www.instagram.com/htmlacademy/">
-                <span class="social-icon social-item-instagram"></span>
+              <a class="social-link social-link-instagram" href="https://www.instagram.com/htmlacademy/">
                 <span class="visually-hidden">Instagram.</span>
               </a>
             </li>
             <li class="social-item">
-              <a class="social-link" href="https://twitter.com/htmlacademy_ru">
+              <a class="social-link social-link-twitter" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Twitter.</span>
-                <span class="social-icon social-item-twitter"></span>
               </a>
             </li>
           </ul>
@@ -357,7 +352,7 @@
       <div class="page-footer-right">
         <a class="page-footer-phone" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
         <a class="page-footer-htmlacademy-logo" href="https://htmlacademy.ru">
-          <svg width="115" height="33" aria-hidden="true" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6 0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"/></svg>
+          <svg width="115" height="33" aria-hidden="true" focusable="false" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6 0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"/></svg>
         </a>
       </div>
     </div>

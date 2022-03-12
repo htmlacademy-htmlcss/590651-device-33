@@ -259,10 +259,6 @@ body {
 }
 
 .search-button:focus {
-  outline: none;
-}
-
-.search-button-wrapper:focus-within {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -275,16 +271,16 @@ body {
 }
 
 .user-nav-item:first-child {
-  margin-right: 155px;
+  margin-right: 150px;
 }
 
 .user-nav-item {
   display: block;
-  margin-left: 22px;
+  margin-left: 25px;
 }
 
 .catalog-user-nav .user-nav-item:first-child {
-  margin-right: 30px;
+  margin-right: 0;
 }
 
 .user-nav-link {
@@ -292,18 +288,42 @@ body {
   color: var(--title-font-color);
 }
 
+.user-nav-link::before {
+  content: "";
+  display: inline-block;
+}
+
+.user-login::before {
+  width: 14px;
+  height: 13px;
+  background-image: url("../images/icons/login-icon.svg");
+}
+
+.user-compare::before {
+  width: 10px;
+  height: 12px;
+  background-image: url("../images/icons/compare-icon.svg");
+}
+
+.user-cart::before {
+  width: 16px;
+  height: 14px;
+  background-image: url("../images/icons/cart-icon.svg");
+}
+
 .user-nav-item-cart {
-  position: relative;
+  margin-left: 35px;
 }
 
 .cart-counter {
   position: relative;
   top: -2px;
+  right: 35px;
 
   display: inline-block;
   width: 21px;
   height: 21px;
-  margin-right: -10px;
+  margin-right: -35px;
 
   text-align: center;
   line-height: 21px;
@@ -326,14 +346,14 @@ body {
 }
 
 .nav-link-text {
-  margin-left: 11px;
+  margin-left: 10px;
 }
 
 .main-nav-list {
   display: flex;
-  width: 480px;
+  width: 1160px;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .main-nav-link {
@@ -344,31 +364,22 @@ body {
   color: var(--title-font-color);
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
+  vertical-align: middle;
   letter-spacing: 0.2em;
 }
 
-.main-nav-item:not(:nth-of-type(3n)) {
+.main-nav-item:not(:nth-of-type(4n)) {
   margin-right: 43px;
-}
-
-.main-nav-item:nth-of-type(3n) {
-  margin-left: 5px;
 }
 
 .catalog-list-opener {
   display: inline-block;
-  width: 290px;
+  width: 300px;
   padding: 5px;
-  margin-left: 63px;
-  margin-right: 276px;
+  margin-left: 55px;
+  margin-right: 232px;
   text-decoration: none;
   color: var(--black);
-}
-
-.catalog-list-opener span {
-  position: relative;
-  right: 35px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -526,11 +537,20 @@ body {
 }
 
 .slider-item {
-  display: grid;
+  display: none;
   margin-top: -14px;
   grid-template-columns: 560px 560px;
   gap: 40px;
   background: linear-gradient(to bottom, var(--main-color) 0 150px, transparent 150px 100%);
+}
+
+.slider-item-active {
+  display: grid;
+}
+
+.slider-image-wrapper {
+  width: 560px;
+  height: 560px;
 }
 
 .slider-description-wrapper {
@@ -548,7 +568,7 @@ body {
   font-weight: 800;
   color: var(--title-font-color);
 
-  z-index: 1;
+  z-index: 0;
 }
 
 .slider-title::before {
@@ -621,7 +641,7 @@ body {
 
 .bullets {
   position: absolute;
-  top: 365px;
+  bottom: 233px;
   right: 0;
   display: flex;
 }
@@ -797,8 +817,12 @@ body {
 }
 
 .service-item {
+  display: none;
   width: 700px;
   position: relative;
+}
+
+.service-item-active {
   display: block;
 }
 
@@ -1054,6 +1078,10 @@ body {
   color: var(--title-font-color);
 }
 
+.subscribe-text-wrapper {
+  width: 560px;
+}
+
 .subscribe-text {
   padding: 5px;
   max-width: 560px;
@@ -1118,7 +1146,7 @@ body {
   border-color: var(--black);
 }
 
-.subscribe-button:active span {
+.subscribe-button:active {
   color: var(--white);
   opacity: 0.3;
 }
@@ -1898,24 +1926,26 @@ body {
   border-radius: 50%;
 }
 
-.social-icon {
+.social-link::after {
   display: block;
   width: 40px;
   height: 40px;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.5;
+
+  content: "";
 }
 
-.social-item-facebook {
+.social-link-facebook::after {
   background-image: url("../images/icons/facebook.svg");
 }
 
-.social-item-instagram {
+.social-link-instagram::after {
   background-image: url("../images/icons/instagram.svg");
 }
 
-.social-item-twitter {
+.social-link-twitter::after {
   background-image: url("../images/icons/twitter.svg");
 }
 
@@ -1923,7 +1953,11 @@ body {
   background-color: #ffc700;
 }
 
-.social-link:active .social-icon {
+.social-link:active {
+  background-color: #ffc700;
+}
+
+.social-link:active::after {
   opacity: 0.3;
 }
 
