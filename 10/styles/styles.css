@@ -436,6 +436,10 @@ body {
   outline-offset: 2px;
 }
 
+.user-nav-link:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
 .main-nav-link:not(.catalog-list-opener):hover {
   opacity: 0.6;
 }
@@ -1986,6 +1990,10 @@ body {
   outline: none;
 }
 
+.social-item:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
 .social-item:focus-within {
   outline: 2px solid #af4fff;
 }
@@ -2027,7 +2035,6 @@ body {
   display: block;
   fill: #FFC700;
 }
-
 
 .page-footer-htmlacademy-logo:hover svg {
   fill: var(--white);
