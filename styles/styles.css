@@ -458,13 +458,17 @@ body {
   outline-offset: 2px;
 }
 
+.catalog-opened .catalog-list-opener::after {
+  background-image: url("../images/icons/minus-icon.svg");
+}
+
 .catalog-nav {
   position: absolute;
   display: none;
   z-index: 10;
 }
 
-.catalog-nav-opened {
+.catalog-list-opened {
   display: block;
   width: 1160px;
 }
@@ -1988,17 +1992,17 @@ body {
   opacity: 0.3;
 }
 
-.social-item:focus-within {
+/* .social-item:focus-within {
+  outline: 2px solid #af4fff;
+} */
+
+.social-link:focus-visible {
   outline: 2px solid #af4fff;
 }
 
-.social-item:focus-visible {
-  outline: 2px solid #af4fff;
-}
-
-.social-link:focus {
+/* .social-link:focus {
   outline: none;
-}
+} */
 
 .page-footer-right a {
   font-size: 16px;
