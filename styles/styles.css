@@ -291,6 +291,7 @@ body {
 .user-nav-link::before {
   content: "";
   display: inline-block;
+  vertical-align: middle;
 }
 
 .user-login::before {
@@ -327,6 +328,7 @@ body {
 
   text-align: center;
   line-height: 21px;
+  vertical-align: middle;
 
   background-color: var(--white);
   border-radius: 50%;
@@ -379,6 +381,7 @@ body {
   margin-left: 55px;
   margin-right: 232px;
   text-decoration: none;
+  vertical-align: middle;
   color: var(--black);
   white-space: nowrap;
   overflow: hidden;
@@ -390,10 +393,13 @@ body {
   left: 286px;
   top: 50%;
   margin-top: -22px;
+
   display: inline-block;
   width: 50px;
   height: 50px;
   margin-left: 17px;
+
+  vertical-align: middle;
   background-color: transparent;
   background-image: url("../images/icons/plus-icon.svg");
   background-position: center;
@@ -471,6 +477,7 @@ body {
 .catalog-nav-item {
   display: inline-block;
   width: 220px;
+  vertical-align: middle;
 }
 
 .catalog-first-col {
@@ -905,6 +912,8 @@ body {
   width: 125px;
   height: 100px;
   margin-right: 196px;
+
+  vertical-align: middle;
   background-color: var(--main-color);
   background-image: url("../images/icons/truck-icon.svg");
   background-position: center;
@@ -992,6 +1001,8 @@ body {
   width: 8px;
   height: 8px;
   margin-right: 26px;
+
+  vertical-align: middle;
   background-color: #ffc700;
   border-radius: 50%;
   content: "";
@@ -1121,6 +1132,7 @@ body {
   line-height: 21px;
   font-weight: 800;
   font-size: 18px;
+
   vertical-align: middle;
   color: var(--title-font-color);
   text-transform: uppercase;
@@ -1165,6 +1177,7 @@ body {
   height: 14px;
   margin-right: 16px;
 
+  vertical-align: middle;
   background-image: url("../images/icons/green-check-icon.svg");
   content: "";
 }
@@ -1212,6 +1225,7 @@ body {
   height: 7px;
   margin: 0 14px;
 
+  vertical-align: middle;
   background-image: url("../images/icons/arrow-right.svg");
 
   content: "";
@@ -1557,6 +1571,7 @@ body {
   width: 11px;
   height: 10px;
 
+  vertical-align: middle;
   background-image: url("../images/icons/sort-order-triangle.svg");
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -1603,11 +1618,13 @@ body {
   display: inline-block;
   height: 60px;
   width: 60px;
+  padding: 15px 11px;
+
+  vertical-align: middle;
   font-family: var(--special-font);
   font-size: 14px;
   border: 2px solid rgba(0, 0, 0, 0.6);
   border-radius: 50%;
-  padding: 15px 11px;
 
   content: "NEW";
 }
@@ -1656,6 +1673,8 @@ body {
   display: inline-block;
   top: 38%;
   left: 50%;
+
+  vertical-align: middle;
   transform: translateX(-50%);
 }
 
