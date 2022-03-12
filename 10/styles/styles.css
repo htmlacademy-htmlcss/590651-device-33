@@ -307,6 +307,8 @@ body {
 }
 
 .user-cart::before {
+  position: relative;
+  bottom: 3px;
   width: 16px;
   height: 14px;
   background-image: url("../images/icons/cart-icon.svg");
@@ -1986,16 +1988,16 @@ body {
   opacity: 0.3;
 }
 
-.social-link:focus-visible {
-  outline: none;
+.social-item:focus-within {
+  outline: 2px solid #af4fff;
 }
 
 .social-item:focus-visible {
   outline: 2px solid #af4fff;
 }
 
-.social-item:focus-within {
-  outline: 2px solid #af4fff;
+.social-link:focus {
+  outline: none;
 }
 
 .page-footer-right a {
