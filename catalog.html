@@ -44,6 +44,36 @@
                 <span class="cart-counter">2</span>
                 <span class="nav-link-text">Корзина</span>
               </a>
+              <!-- for cart popover opening add class "popover-cart-open"  -->
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <h2 class="visually-hidden">Корзина.</h2>
+                  <ul class="popover-products-wrapper">
+                    <li class="popover-cart-product">
+                      <img class="popover-cart-product-image" src="images/icons/cart-product-first.png" alt="Любительская селфи-палка." width="40" height="44">
+                      <p class="popover-cart-product-name">Любительская<br> селфи-палка</p>
+                      <button class="popover-product-delete"></button>
+                    </li>
+                    <li class="popover-cart-product">
+                      <img class="popover-cart-product-image" src="images/icons/cart-product-second.png" alt="Профессиональная селфи-палка." width="40" height="44">
+                      <p class="popover-cart-product-name">Профессиональная<br> селфи-палка</p>
+                      <button class="popover-product-delete"></button>
+                    </li>
+                  </ul>
+                  <section class="popover-cart-results-line">
+                    <h3 class="visually-hidden">Итого:</h3>
+                    <div class="popover-cart-count-field">
+                      <span class="items-count">Товаров: </span>
+                      <input class="items-counter" type="number" value="2">
+                    </div>
+                    <div class="popover-cart-count-field">
+                      <span class="items-count">Сумма: </span>
+                      <input class="items-counter" type="number" value="2000"> &#x20bd;
+                    </div>
+                  </section>
+                  <button class="popover-cart-button">Открыть корзину</button>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -229,8 +259,11 @@
             <h2 class="visually-hidden">Товары.</h2>
             <!-- to mark a product as new, add a class "new-product" to article with "product-card" class-->
             <article class="product-card">
+                <span class="new-product-mark">New</span>
                 <a class="product-card-link" href="#">
-                  <img class="product-card-image" src="images/catalog-items/product-1.jpg" alt="" width="360" height="380">
+                  <div class="product-image-wrapper">
+                    <img class="product-card-image" src="images/catalog-items/product-1.jpg" alt="" width="360" height="380">
+                  </div>
                   <div class="product-card-text">
                     <h3 class="title product-card-title">Любительская<br> селфи-палка</h3>
                     <span class="product-card-price">500 ₽</span>
@@ -240,8 +273,11 @@
             </article>
 
             <article class="product-card">
+                <span class="new-product-mark">New</span>
                 <a class="product-card-link" href="#">
-                  <img class="product-card-image" src="images/catalog-items/product-2.jpg" alt="" width="360" height="380">
+                  <div class="product-image-wrapper">
+                    <img class="product-card-image" src="images/catalog-items/product-2.jpg" alt="" width="360" height="380">
+                  </div>
                   <div class="product-card-text">
                     <h3 class="title product-card-title">Профессиональная<br> селфи-палка</h3>
                     <span class="product-card-price">1500 ₽</span>
@@ -251,8 +287,11 @@
             </article>
 
             <article class="product-card">
+                <span class="new-product-mark">New</span>
                 <a class="product-card-link" href="#">
-                  <img class="product-card-image" src="images/catalog-items/product-3.jpg" alt="" width="360" height="380">
+                  <div class="product-image-wrapper">
+                    <img class="product-card-image" src="images/catalog-items/product-3.jpg" alt="" width="360" height="380">
+                  </div>
                   <div class="product-card-text">
                     <h3 class="title product-card-title">Непотопляемая<br> селфи-палка</h3>
                     <span class="product-card-price">2500 ₽</span>
@@ -262,8 +301,11 @@
             </article>
 
             <article class="product-card new-product">
+                <span class="new-product-mark">New</span>
                 <a class="product-card-link" href="#">
-                  <img class="product-card-image" src="images/catalog-items/product-4.jpg" alt="" width="360" height="380">
+                  <div class="product-image-wrapper">
+                    <img class="product-card-image" src="images/catalog-items/product-4.jpg" alt="" width="360" height="380">
+                  </div>
                   <div class="product-card-text">
                     <h3 class="title product-card-title">Селфи-палка «Следуй за мной»</h3>
                     <span class="product-card-price">1500 ₽</span>
@@ -279,37 +321,35 @@
               <span>Загрузить ещё</span>
             </button>
 
-            <ul class="list pagination-list">
-              <li class="pagination-item">
+            <section class="list pagination-list">
+              <div class="pagination-item">
                 <a href="#" class="pagination-prev pagination-button">
                   <span>Назад</span>
                 </a>
-              </li>
-              <li class="pagination-item">
-                <ul class="list page-num-list">
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">1</a>
-                  </li>
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">2</a>
-                  </li>
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">3</a>
-                  </li>
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">...</a>
-                  </li>
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">15</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="pagination-item">
+              </div>
+              <ul class="list pagination-item page-num-list">
+                <li class="pagination-page-num">
+                  <a href="#" class="pagination-link">1</a>
+                </li>
+                <li class="pagination-page-num">
+                  <a href="#" class="pagination-link">2</a>
+                </li>
+                <li class="pagination-page-num">
+                  <a href="#" class="pagination-link">3</a>
+                </li>
+                <li class="pagination-page-num">
+                  <span class="pagination-link">...</span>
+                </li>
+                <li class="pagination-page-num">
+                  <a href="#" class="pagination-link">15</a>
+                </li>
+              </ul>
+              <div class="pagination-item">
                 <a href="#" class="pagination-next pagination-button">
                   <span>Вперёд</span>
                 </a>
-              </li>
-            </ul>
+              </div>
+            </section>
           </section>
         </div>
       </div>
