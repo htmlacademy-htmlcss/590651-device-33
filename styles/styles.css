@@ -216,7 +216,6 @@ body {
 
 .search-field:focus-within {
   outline: 2px solid #af4fff;
-  -moz-outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
@@ -316,6 +315,7 @@ body {
 }
 
 .user-nav-item-cart {
+  position: relative;
   margin-left: 35px;
 }
 
@@ -346,7 +346,7 @@ body {
 
 .popover {
   position: absolute;
-  right: 240px;
+  right: -85px;
   width: 320px;
   min-height: 300px;
   color: var(--white);
@@ -385,8 +385,32 @@ body {
 
 .popover-cart-product {
   display: flex;
+}
+
+.cart-product-link {
+  display: flex;
   align-items: center;
   max-height: 40px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.cart-product-link:hover {
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
+.cart-product-link:active {
+  opacity: 0.3;
+}
+
+.cart-product-link:visited {
+  color: var(--white);
+}
+
+.cart-product-link:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .popover-cart-product:not(:last-of-type) {
@@ -403,6 +427,7 @@ body {
 
 .popover-product-delete {
   display: block;
+  padding: 0;
   background-image: url("../images/icons/cart-product-delete.svg");
   background-repeat: no-repeat;
   width: 10px;
@@ -423,6 +448,7 @@ body {
 
 .popover-product-delete:focus-visible {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .popover-cart-results-line {
@@ -431,21 +457,8 @@ body {
   background-color: #1a1a1a;
 }
 
-.popover-cart-count-field:nth-of-type(2n-1) {
-  margin-right: 50px;
-}
-
-.items-counter {
-  width: 40px;
-  border: none;
-  background-color: transparent;
-  color: var(--white);
-  font-size: 16px;
-}
-
-.items-counter::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
+.popover-cart-count-item:nth-of-type(2n-1) {
+  margin-right: 80px;
 }
 
 .popover-cart-button {
@@ -2257,7 +2270,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
-  z-index: 1;
+  z-index: 20;
 }
 
 .modal-open {
@@ -2309,6 +2322,7 @@ body {
 
 .modal-title {
   padding: 0;
+  padding-right: 40px;
   margin: 0;
   margin-bottom: 38px;
   font-family: var(--special-font);
@@ -2451,18 +2465,20 @@ body {
   outline: 2px solid #ff3d3d;
 }
 
-.error-message {
-  display: none;
+.field-error .field:invalid + .field-message {
+  display: block;
   color: #ff3d3d;
 }
 
-.delivery-form-field[name="E-mail"]:invalid + .error-message {
-  display: block;
+.field-error .field:valid + .field-message {
+  display: none;
 }
 
 .delivery-form-field[name="Количество"] {
-  display: block;
+  display: inline-block;
+  padding: 5px;
   text-align: center;
+  vertical-align: middle;
   width: 60px;
   height: 60px;
 }
@@ -2470,7 +2486,12 @@ body {
 .delivery-form-field[name="Количество"]::-webkit-outer-spin-button,
 .delivery-form-field[name="Количество"]::-webkit-inner-spin-button {
   appearance: none;
+  -webkit-appearance: none;
   margin: 0;
+}
+
+.delivery-form-field[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .delivery-form-field:active {
