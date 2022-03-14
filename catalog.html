@@ -150,26 +150,26 @@
 
             <fieldset class="filters-group filter-price">
               <legend class="filters-subtitle">Стоимость</legend>
-              <div class="range">
-                <div class="range-scale">
-                  <div class="range-bar" style="width: 119px;">
+
+              <div class="range-wrapper">
+                <span class="range-scale"></span>
+                <div class="range-bar">
+                  <div class="range-toggle-wrapper left-toggle">
                     <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
+                    <label class="range-label min-label">
+                      от <input class="range-input" type="number" value="0" name="min-price">
+                    </label>
+                  </div>
+                  <div class="range-toggle-wrapper right-toggle">
                     <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
+                    <label class="range-label max-label">
+                      до <input class="range-input range-input-max" type="number" value="5000" name="max-price">
+                    </label>
                   </div>
-                </div>
-
-                <div class="range-wrapper-inputs">
-                  <label class="catalog-filter-label">
-                    от <input class="range-input" type="number" value="0" name="min-price">
-                  </label>
-                  <label class="catalog-filter-label">
-                    до <input class="range-input range-input-max" type="number" value="5000" name="max-price">
-                  </label>
-
                 </div>
               </div>
             </fieldset>

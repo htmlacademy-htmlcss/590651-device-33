@@ -1481,22 +1481,31 @@ body {
   color: var(--title-font-color);
 }
 
-.range {
+.range-wrapper {
   padding: 20px 0;
+  margin-top: 5px;
 }
 
 .range-scale {
-  position: relative;
+  display: block;
   height: 2px;
   width: 200px;
-  margin-top: 5px;
+  margin-bottom: -2px;
   background-color: #dcdcdc;
 }
 
 .range-bar {
-  position: absolute;
+  position: relative;
+  width: 119px;
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
   height: 2px;
   background-color: var(--black);
+}
+
+.range-toggle-wrapper {
+  position: absolute;
 }
 
 .range-toggle {
@@ -1508,6 +1517,10 @@ body {
   border: 2px solid var(--black);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.toggle-min {
+  left: -9px;
 }
 
 .range-toggle:hover {
@@ -1524,32 +1537,25 @@ body {
   outline: 2px solid #af4fff;
 }
 
-.toggle-min {
-  left: -9px;
+.left-toggle {
   top: -8px;
 }
 
-.toggle-max {
-  right: -9px;
+.right-toggle {
   top: -8px;
+  left: 110px;
 }
 
-.range-wrapper-inputs {
+.range-label {
+  position: absolute;
   display: flex;
-  width: 110px;
-  justify-content: space-between;
-}
-
-.catalog-filter-label {
-  display: flex;
-  margin-top: 7px;
+  margin-top: 14px;
   margin-left: -15px;
   color: rgba(0, 0, 0, 0.3);
 }
 
 .range-input {
-  position: absolute;
-  width: 60px;
+  width: 20px;
   padding: 0;
   text-align: center;
   font: var(--main-font);
@@ -1560,16 +1566,16 @@ body {
   appearance: textfield;
 }
 
-.catalog-filter-label:focus-visible {
+.range-label:focus-visible {
   outline: 2px solid #af4fff;
 }
 
-.catalog-filter-label:focus-within .range-input {
+.range-label:focus-within .range-input {
   outline: 2px solid #af4fff;
 }
 
 .range-input-max {
-  width: 90px;
+  width: 40px;
 }
 
 .range-input::-webkit-outer-spin-button,
