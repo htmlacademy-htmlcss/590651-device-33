@@ -512,6 +512,7 @@ body {
 
 .user-nav-item-logout {
   margin-left: 21px;
+  margin-right: 5px;
 }
 
 .user-nav-item-logout::before {
