@@ -511,11 +511,16 @@ body {
 }
 
 .user-nav-item-logout {
-  margin-left: 11px;
+  margin-left: 21px;
+}
+
+.user-nav-item-logout::before {
+  display: none;
 }
 
 .user-nav-item-logout .nav-link-text {
   opacity: 0.3;
+  margin-left: 0;
 }
 
 .nav-link-text {
