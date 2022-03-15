@@ -1581,6 +1581,7 @@ body {
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
+  -webkit-appearance: none;
   margin: 0;
 }
 
@@ -2394,6 +2395,7 @@ body {
 .tooltip {
   position: absolute;
   margin-left: 8px;
+  margin-top: -3px;
   display: inline-block;
 }
 
