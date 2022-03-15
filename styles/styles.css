@@ -713,7 +713,7 @@ body {
 
 .slider-section {
   margin-top: -23px;
-  margin-bottom: 10px;
+  margin-bottom: 70px;
 }
 
 .slider-container {
@@ -789,8 +789,8 @@ body {
 }
 
 .slider-buttons {
-  position: relative;
-  top: -349px;
+  position: absolute;
+  top: 210px;
   left: 30px;
 
   display: flex;
@@ -826,7 +826,7 @@ body {
 
 .bullets {
   position: absolute;
-  bottom: 233px;
+  bottom: 173px;
   right: 0;
   display: flex;
 }
