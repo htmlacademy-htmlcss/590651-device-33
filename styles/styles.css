@@ -387,7 +387,8 @@ body {
 }
 
 .popover-products-wrapper {
-  padding: 20px;
+  padding: 30px 20px 10px;
+  margin-bottom: 6px;
 }
 
 .popover-cart-product {
@@ -421,7 +422,7 @@ body {
 }
 
 .popover-cart-product:not(:last-of-type) {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .popover-cart-product-image {
@@ -465,17 +466,19 @@ body {
 }
 
 .popover-cart-count-item:nth-of-type(2n-1) {
-  margin-right: 80px;
+  margin-right: 85px;
 }
 
 .popover-cart-button {
   margin: 20px;
-  padding: 15px 25px;
+  padding: 10px 25px;
   text-transform: uppercase;
   font-family: var(--special-font);
   font-size: 18px;
+  color: var(--black);
   white-space: nowrap;
   letter-spacing: 0.2em;
+  background-color: var(--white);
   border: none;
   cursor: pointer;
 }
@@ -2421,6 +2424,11 @@ body {
   background-color: var(--main-color);
 }
 
+.tooltip-toggle:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .tooltip-icon {
   display: block;
 }
@@ -2532,6 +2540,7 @@ body {
   border: none;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .modal-minus-button {
@@ -2542,6 +2551,16 @@ body {
   background-image: url("../images/icons/plus-icon.svg");
 }
 
+.modal-button:hover {
+  background-size: 1em;
+}
+
 .modal-button:focus-visible {
   outline: 2px solid #af4fff;
+  z-index: 10;
+}
+
+.modal-button + .field:focus {
+  outline: 2px solid #af4fff;
+  z-index: 10;
 }
