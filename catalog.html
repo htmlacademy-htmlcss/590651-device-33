@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог</title>
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
+  <link rel="icon" href="images/favicon.ico"><!-- 16×16 -->
 </head>
 <body class="page-body">
   <div class="container">
@@ -44,6 +44,38 @@
                 <span class="cart-counter">2</span>
                 <span class="nav-link-text">Корзина</span>
               </a>
+              <!-- for cart popover opening add class "popover-cart-open"  -->
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <h2 class="visually-hidden">Корзина.</h2>
+                  <ul class="list popover-products-wrapper">
+                    <li class="popover-cart-product">
+                      <a href="#" class="cart-product-link">
+                        <img class="popover-cart-product-image" src="images/icons/cart-product-first.png" alt="Любительская селфи-палка." width="40" height="44">
+                        <p class="popover-cart-product-name">Любительская<br> селфи-палка</p>
+                      </a>
+                      <button class="popover-product-delete"></button>
+                    </li>
+                    <li class="popover-cart-product">
+                      <a href="#" class="cart-product-link">
+                        <img class="popover-cart-product-image" src="images/icons/cart-product-second.png" alt="Профессиональная селфи-палка." width="40" height="44">
+                        <p class="popover-cart-product-name">Профессиональная<br> селфи-палка</p>
+                      </a>
+                      <button class="popover-product-delete"></button>
+                    </li>
+                  </ul>
+                  <section class="popover-cart-results-line">
+                    <h3 class="visually-hidden">Итого:</h3>
+                    <div class="popover-cart-count-item">
+                      <span class="items-count">Товаров: 2</span>
+                    </div>
+                    <div class="popover-cart-count-item">
+                      <span class="items-count">Сумма: 2000 &#x20bd;</span>
+                    </div>
+                  </section>
+                  <button class="popover-cart-button">Открыть корзину</button>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -118,26 +150,26 @@
 
             <fieldset class="filters-group filter-price">
               <legend class="filters-subtitle">Стоимость</legend>
-              <div class="range">
-                <div class="range-scale">
-                  <div class="range-bar" style="width: 119px;">
+
+              <div class="range-wrapper">
+                <span class="range-scale"></span>
+                <div class="range-bar">
+                  <div class="range-toggle-wrapper left-toggle">
                     <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
+                    <label class="range-label min-label">
+                      от <input class="range-input" type="number" value="0" name="min-price">
+                    </label>
+                  </div>
+                  <div class="range-toggle-wrapper right-toggle">
                     <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
+                    <label class="range-label max-label">
+                      до <input class="range-input range-input-max" type="number" value="5000" name="max-price">
+                    </label>
                   </div>
-                </div>
-
-                <div class="range-wrapper-inputs">
-                  <label class="catalog-filter-label">
-                    от <input class="range-input" type="number" value="0" name="min-price">
-                  </label>
-                  <label class="catalog-filter-label">
-                    до <input class="range-input range-input-max" type="number" value="5000" name="max-price">
-                  </label>
-
                 </div>
               </div>
             </fieldset>
@@ -229,8 +261,11 @@
             <h2 class="visually-hidden">Товары.</h2>
             <!-- to mark a product as new, add a class "new-product" to article with "product-card" class-->
             <article class="product-card">
+                <span class="new-product-mark">New</span>
                 <a class="product-card-link" href="#">
-                  <img class="product-card-image" src="images/catalog-items/product-1.jpg" alt="" width="360" height="380">
+                  <div class="product-image-wrapper">
+                    <img class="product-card-image" src="images/catalog-items/product-1.jpg" alt="" width="360" height="380">
+                  </div>
                   <div class="product-card-text">
                     <h3 class="title product-card-title">Любительская<br> селфи-палка</h3>
                     <span class="product-card-price">500 ₽</span>
@@ -240,8 +275,11 @@
             </article>
 
             <article class="product-card">
+                <span class="new-product-mark">New</span>
                 <a class="product-card-link" href="#">
-                  <img class="product-card-image" src="images/catalog-items/product-2.jpg" alt="" width="360" height="380">
+                  <div class="product-image-wrapper">
+                    <img class="product-card-image" src="images/catalog-items/product-2.jpg" alt="" width="360" height="380">
+                  </div>
                   <div class="product-card-text">
                     <h3 class="title product-card-title">Профессиональная<br> селфи-палка</h3>
                     <span class="product-card-price">1500 ₽</span>
@@ -251,8 +289,11 @@
             </article>
 
             <article class="product-card">
+                <span class="new-product-mark">New</span>
                 <a class="product-card-link" href="#">
-                  <img class="product-card-image" src="images/catalog-items/product-3.jpg" alt="" width="360" height="380">
+                  <div class="product-image-wrapper">
+                    <img class="product-card-image" src="images/catalog-items/product-3.jpg" alt="" width="360" height="380">
+                  </div>
                   <div class="product-card-text">
                     <h3 class="title product-card-title">Непотопляемая<br> селфи-палка</h3>
                     <span class="product-card-price">2500 ₽</span>
@@ -262,8 +303,11 @@
             </article>
 
             <article class="product-card new-product">
+                <span class="new-product-mark">New</span>
                 <a class="product-card-link" href="#">
-                  <img class="product-card-image" src="images/catalog-items/product-4.jpg" alt="" width="360" height="380">
+                  <div class="product-image-wrapper">
+                    <img class="product-card-image" src="images/catalog-items/product-4.jpg" alt="" width="360" height="380">
+                  </div>
                   <div class="product-card-text">
                     <h3 class="title product-card-title">Селфи-палка «Следуй за мной»</h3>
                     <span class="product-card-price">1500 ₽</span>
@@ -279,37 +323,36 @@
               <span>Загрузить ещё</span>
             </button>
 
-            <ul class="list pagination-list">
-              <li class="pagination-item">
+            <section class="list pagination-list">
+              <h3 class="visually-hidden">Навигация по страницам каталога.</h3>
+              <div class="pagination-item">
                 <a href="#" class="pagination-prev pagination-button">
                   <span>Назад</span>
                 </a>
-              </li>
-              <li class="pagination-item">
-                <ul class="list page-num-list">
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">1</a>
-                  </li>
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">2</a>
-                  </li>
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">3</a>
-                  </li>
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">...</a>
-                  </li>
-                  <li class="pagination-page-num">
-                    <a href="#" class="pagination-link">15</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="pagination-item">
+              </div>
+              <ul class="list pagination-item page-num-list">
+                <li class="pagination-page-num">
+                  <a href="#" class="pagination-link">1</a>
+                </li>
+                <li class="pagination-page-num">
+                  <a href="#" class="pagination-link">2</a>
+                </li>
+                <li class="pagination-page-num">
+                  <a href="#" class="pagination-link">3</a>
+                </li>
+                <li class="pagination-page-num">
+                  <span class="pagination-link">...</span>
+                </li>
+                <li class="pagination-page-num">
+                  <a href="#" class="pagination-link">15</a>
+                </li>
+              </ul>
+              <div class="pagination-item">
                 <a href="#" class="pagination-next pagination-button">
                   <span>Вперёд</span>
                 </a>
-              </li>
-            </ul>
+              </div>
+            </section>
           </section>
         </div>
       </div>

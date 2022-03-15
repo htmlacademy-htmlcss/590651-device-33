@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Девайс</title>
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
+  <link rel="icon" href="images/favicon.ico"><!-- 16×16 -->
 </head>
 <body class="page-body">
   <div class="container">
@@ -41,6 +41,38 @@
                 <span class="cart-counter">2</span>
                 <span class="nav-link-text">Корзина</span>
               </a>
+              <!-- for cart popover opening add class "popover-cart-open"  -->
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <h2 class="visually-hidden">Корзина.</h2>
+                  <ul class="list popover-products-wrapper">
+                    <li class="popover-cart-product">
+                      <a href="#" class="cart-product-link">
+                        <img class="popover-cart-product-image" src="images/icons/cart-product-first.png" alt="Любительская селфи-палка." width="40" height="44">
+                        <p class="popover-cart-product-name">Любительская<br> селфи-палка</p>
+                      </a>
+                      <button class="popover-product-delete"></button>
+                    </li>
+                    <li class="popover-cart-product">
+                      <a href="#" class="cart-product-link">
+                        <img class="popover-cart-product-image" src="images/icons/cart-product-second.png" alt="Профессиональная селфи-палка." width="40" height="44">
+                        <p class="popover-cart-product-name">Профессиональная<br> селфи-палка</p>
+                      </a>
+                      <button class="popover-product-delete"></button>
+                    </li>
+                  </ul>
+                  <section class="popover-cart-results-line">
+                    <h3 class="visually-hidden">Итого:</h3>
+                    <div class="popover-cart-count-item">
+                      <span class="items-count">Товаров: 2</span>
+                    </div>
+                    <div class="popover-cart-count-item">
+                      <span class="items-count">Сумма: 2000 &#x20bd;</span>
+                    </div>
+                  </section>
+                  <button class="popover-cart-button">Открыть корзину</button>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -242,12 +274,12 @@
       </div>
     </section>
 
+
     <div class="container">
       <a class="delivery" href="#">
         <span>доставим редкий товар под заказ</span>
         <span class="info-button"></span>
       </a>
-
     </div>
 
     <div class="information-wrapper container">
@@ -357,5 +389,55 @@
       </div>
     </div>
   </footer>
+
+  <!-- add class modal-open for delivery form opening -->
+  <div class="modal-container">
+    <div class="modal modal-delivery">
+      <button class="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть.</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group field-success">
+            <label class="form-label" for="name-field">Ваше имя:</label>
+            <input class="delivery-form-field field" type="text" id="name-field" name="Имя" placeholder="Введите имя" required>
+            <span class="field-message">Добавьте имя</span>
+          </p>
+          <p class="field-group field-error">
+            <label class="form-label" for="email-field">Ваш e-mail:</label>
+            <input class="delivery-form-field field" type="email" id="email-field" value="почта" name="E-mail" placeholder="Введите e-mail" required>
+            <span class="field-message">Забавный у вас адрес</span>
+          </p>
+          <p class="field-group">
+            <label class="form-label" for="order">Что нужно привезти:</label>
+            <input class="delivery-form-field field" type="text" id="order" name="Заказ" placeholder="В свободной форме" required>
+          </p>
+          <div class="field-group amount-container">
+            <span class="amount-wrapper">
+              <label class="form-label" for="amount">Количество:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                  <svg class="tooltip-icon" width="2" height="13" aria-hidden="true" focusable="false" viewBox="0 0 2 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 .357H0v2h2v-2ZM2 4.357H0v8h2v-8Z" fill="#000"/></svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+              </span>
+            </span>
+            <div class="amount-buttons-wrapper">
+              <button class="modal-button modal-minus-button" type="button">
+                <span class="visually-hidden">Меньше.</span>
+              </button>
+              <input class="delivery-form-field field" type="number" id="amount" name="Количество" placeholder="1">
+              <button class="modal-button modal-plus-button">
+                <span class="visually-hidden">Больше.</span>
+              </button>
+            </div>
+          </div>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
 </body>
 </html>
