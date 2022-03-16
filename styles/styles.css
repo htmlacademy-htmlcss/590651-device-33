@@ -146,7 +146,7 @@ body {
 
 .page-header {
   margin-top: 40px;
-  padding-bottom: 23px;
+  padding-bottom: 19px;
 
   color: var(--title-font-color);
 
@@ -175,21 +175,17 @@ body {
 }
 
 .main-nav {
-  position: relative;
   display: flex;
+  padding: 0 50px;
   flex-wrap: wrap;
-  padding-top: 8px;
   align-items: center;
   z-index: 1;
 }
 
 .page-header-top {
   display: flex;
-  padding-left: 60px;
-  padding-top: 43px;
-  padding-right: 60px;
+  padding: 43px 60px 25px;
   align-items: center;
-  margin-bottom: 23px;
 }
 
 .search {
@@ -319,6 +315,10 @@ body {
   width: 16px;
   height: 14px;
   background-image: url("../images/icons/cart-icon.svg");
+}
+
+.user-cart .nav-link-text {
+  margin-left: 13px;
 }
 
 .user-nav-item-cart {
@@ -498,11 +498,11 @@ body {
   outline: 2px solid #af4fff;
 }
 
-/*************************************************
+/**************************************************************************************************
 
-                POPOVER STYLES END
+                                        POPOVER STYLES END
 
-*************************************************/
+**************************************************************************************************/
 
 
 
@@ -535,6 +535,22 @@ body {
   align-items: center;
 }
 
+.main-nav-item {
+  padding: 5px;
+}
+
+.main-nav-item:not(:nth-of-type(4n)) {
+  margin-right: 35px;
+}
+
+.main-nav-item:first-child {
+  margin-right: 328px;
+}
+
+.catalog-link-wrapper {
+  position: relative;
+}
+
 .main-nav-link {
   display: inline-block;
   padding: 0;
@@ -547,16 +563,8 @@ body {
   letter-spacing: 0.2em;
 }
 
-.main-nav-item:not(:nth-of-type(4n)) {
-  margin-right: 43px;
-}
-
 .catalog-list-opener {
-  display: inline-block;
-  width: 300px;
   padding: 5px;
-  margin-left: 55px;
-  margin-right: 232px;
   text-decoration: none;
   vertical-align: middle;
   color: var(--black);
@@ -564,17 +572,17 @@ body {
   overflow: hidden;
 }
 
-.catalog-list-opener::after {
+.catalog-link-wrapper::after {
   content: "";
   position: absolute;
-  left: 286px;
+  left: 230px;
   top: 50%;
-  margin-top: -22px;
+  margin-top: -25px;
 
   display: inline-block;
   width: 50px;
   height: 50px;
-  margin-left: 17px;
+  margin-left: 23px;
 
   vertical-align: middle;
   background-color: transparent;
@@ -587,7 +595,7 @@ body {
   z-index: 1;
 }
 
-.catalog-list-opener:hover::after  {
+.catalog-link-wrapper:hover::after  {
   opacity: 1;
 }
 
@@ -635,11 +643,12 @@ body {
 
 .catalog-nav {
   position: absolute;
+  left: -55px;
   display: none;
   z-index: 10;
 }
 
-.catalog-opened .main-nav-link::after {
+.catalog-opened.catalog-link-wrapper::after {
   background-image: url("../images/icons/minus-icon.svg");
 }
 
