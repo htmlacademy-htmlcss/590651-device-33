@@ -329,7 +329,7 @@ body {
 .cart-counter {
   position: relative;
   top: -2px;
-  right: 35px;
+  right: 37px;
 
   display: inline-block;
   width: 21px;
@@ -1471,7 +1471,7 @@ body {
 }
 
 .catalog-title {
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 
   font-family: var(--special-font);
   font-size: 16px;
@@ -1490,14 +1490,14 @@ body {
 .filters-group {
   width: 200px;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 34px;
   margin: 0;
 
   border: none;
 }
 
 .filters-group + .button {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .filters-title {
@@ -1510,7 +1510,7 @@ body {
 }
 
 .range-wrapper {
-  padding: 20px 0;
+  padding: 23px 0;
   margin-top: 5px;
 }
 
@@ -1616,7 +1616,7 @@ body {
 .filters-subtitle {
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-family: var(--special-font);
   font-size: 16px;
   line-height: 19px;
@@ -1630,14 +1630,14 @@ body {
 }
 
 .filter-price {
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 .filters-subtitle::before {
   display: block;
   width: 200px;
   height: 2px;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 
   background-color: var(--black);
   content: "";
@@ -1889,6 +1889,7 @@ body {
 .product-card-text {
   display: flex;
   justify-content: space-between;
+  margin: -3px 0 3px;
 }
 
 .product-card-title {
