@@ -146,7 +146,7 @@ body {
 
 .page-header {
   margin-top: 40px;
-  padding: 20px;
+  padding: 44px 50px 19px;
 
   color: var(--title-font-color);
 
@@ -155,11 +155,11 @@ body {
 
 .header-logo {
   position: absolute;
-  top: 17px;
+  top: 19px;
   display: block;
   width: 145px;
   height: 36px;
-  margin-left: 40px;
+  margin-left: 10px;
 }
 
 .header-logo:hover {
@@ -176,7 +176,7 @@ body {
 
 .main-nav {
   display: flex;
-  padding: 0 30px;
+  padding: 0;
   flex-wrap: wrap;
   align-items: center;
   z-index: 1;
@@ -184,7 +184,8 @@ body {
 
 .page-header-top {
   display: flex;
-  padding: 23px 40px 25px;
+  padding: 0 10px;
+  margin-bottom: 24px;
   align-items: center;
 }
 
@@ -815,12 +816,12 @@ body {
 }
 
 .slider-text {
-  margin-bottom: 54px;
+  margin-bottom: 50px;
 }
 
 .slider-buttons {
   position: absolute;
-  top: 210px;
+  top: 211px;
   left: 70px;
 
   display: flex;
@@ -897,7 +898,7 @@ body {
 
 .details-container {
   display: flex;
-  margin-top: 29px;
+  margin-top: 31px;
 }
 
 .details {
@@ -999,7 +1000,7 @@ body {
 .services {
   margin-bottom: 70px;
   margin-top: 15px;
-  padding-bottom: 70px;
+  padding-bottom: 73px;
   background: linear-gradient(to bottom, transparent 0 100px, #f0f0f0 100px 100%);
 }
 
@@ -1011,8 +1012,9 @@ body {
 .services-nav-list {
   position: relative;
   width: 287px;
-  border-right: 7px solid var(--black);
   padding: 64px 0;
+  margin-top: -3px;
+  border-right: 7px solid var(--black);
 }
 
 .services-nav-item + .services-nav-item {
@@ -1137,6 +1139,7 @@ body {
   display: flex;
   align-items: center;
   letter-spacing: 0.2em;
+  padding-top: 3px;
 }
 
 .delivery-button-text::before {
@@ -1144,6 +1147,7 @@ body {
   width: 125px;
   height: 100px;
   margin-right: 196px;
+  margin-top: -3px;
 
   vertical-align: middle;
   background-color: var(--main-color);
@@ -1217,10 +1221,14 @@ body {
 }
 
 .information-wrapper p {
+  margin: 0;
   margin-bottom: 30px;
 }
 
 .about-list {
+  margin-bottom: 31px;
+  margin-top: -1px;
+  padding-left: 2px;
   font-weight: 700;
   line-height: 20px;
   color: var(--title-font-color);
@@ -1277,16 +1285,13 @@ body {
   outline: 2px solid #af4fff;
 }
 
-.information-wrapper .list {
+.contacts-shedule {
   margin-bottom: 30px;
 }
 
 .contacts .button {
-  margin-bottom: 67px;
-}
-
-.contacts .button {
   padding: 9px 1.8em;
+  margin-bottom: 70px;
 }
 
 .subscribe {
@@ -1347,6 +1352,8 @@ body {
 }
 
 .subscribe-input::placeholder {
+  font-size: 18px;
+  line-height: 30px;
   opacity: 0.5;
 }
 
@@ -1438,12 +1445,13 @@ body {
 }
 
 .inner-header .container {
+  width: 1160px;
   padding-left: 60px;
-  padding-top: 20px;
+  padding-top: 36px;
+  padding-right: 0;
 }
 
 .inner-header-title {
-  margin-top: 16px;
   margin-bottom: 9px;
 
   font-family: var(--special-font);
@@ -2198,7 +2206,7 @@ body {
 }
 
 .social {
-  margin-bottom: 61px;
+  margin-bottom: 50px;
 }
 
 .social-list {
@@ -2274,6 +2282,7 @@ body {
 
 .social-link:focus {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .page-footer-right a {
