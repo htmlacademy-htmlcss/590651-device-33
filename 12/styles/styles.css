@@ -547,7 +547,7 @@ body {
 }
 
 .main-nav-item:not(:nth-of-type(4n)) {
-  margin-right: 35px;
+  margin-right: 37px;
 }
 
 .main-nav-item:first-child {
@@ -1613,8 +1613,8 @@ body {
 .range-label {
   position: absolute;
   display: flex;
-  margin-top: 14px;
-  margin-left: -15px;
+  margin-top: 17px;
+  margin-left: -20px;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1629,6 +1629,7 @@ body {
   border: none;
   appearance: textfield;
 }
+
 
 .range-label:focus {
   outline: 2px solid #af4fff;
