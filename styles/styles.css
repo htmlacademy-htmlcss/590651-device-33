@@ -1114,7 +1114,7 @@ body {
 }
 
 .services-text {
-  width: 460px;
+  width: 455px;
   margin: 0;
 }
 
@@ -1636,6 +1636,8 @@ body {
   background-color: transparent;
   border: none;
   appearance: textfield;
+  -moz-appearance: textfield;
+
 }
 
 
